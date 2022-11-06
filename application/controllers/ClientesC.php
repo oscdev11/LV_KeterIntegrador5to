@@ -56,7 +56,6 @@ class ClientesC extends CI_Controller
 
         $data['cliente'] = $this->ClientesM->getCliente($id_Cliente);
 
-
         $this->load->helper(array('form', 'url'));
 
                 $this->load->library('form_validation');

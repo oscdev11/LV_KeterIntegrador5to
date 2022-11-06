@@ -15,6 +15,7 @@
             <th class="w-auto p-3">ID</th>
             <th class="w-auto p-3">Nombre</th>
             <th class="w-auto p-3">Fabricante</th>
+            <th class="w-auto p-3">Tipo</th>
             <th class="w-auto p-3">Descripción</th>
             <th class="w-auto p-3">Cantidad Disponible</th>
         </thead>
@@ -30,8 +31,9 @@
                     <td class="w-auto p-3 align-middle"><?=$key->id_Material ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombre ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->fabricante ?></td>
+                    <td class="w-auto p-3 align-middle"><?=$key->tipo ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->descripcion ?></td>
-                    <td class="w-auto p-3 align-middle"><?=$key->cantidadDisponible ?> ml.</td>
+                    <td class="w-auto p-3 align-middle"><?=$key->cantidadDisponible ?> kg.</td>
                 </tr>
             <?php endforeach ?>
         </tbody>

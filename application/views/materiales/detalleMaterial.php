@@ -2,7 +2,7 @@
 <div class="container">
 
 <br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Detalles generales de cliente: <b><?=$cliente[0]->alias ?></b></h5></div>
+<div class="alert alert-success align-middle" role="alert" align="center"><h5>Detalles generales de material: <b><?=$material[0]->nombre ?></b></h5></div>
 
 
 <div class="container" align="center">
@@ -15,51 +15,27 @@
         </thead>
         <tbody>
             <tr>
-                <td align="right">Razón social:</td>
-                <td><?=$cliente[0]->razonSocial ?></td>
+                <td align="right">Nombre:</td>
+                <td><?=$material[0]->nombre ?></td>
             </tr>
             <tr>
-                <td align="right">Alias:</td>
-                <td><?=$cliente[0]->alias ?></td>
+                <td align="right">Fabricante:</td>
+                <td><?=$material[0]->fabricante ?></td>
             </tr>
             <tr>
-                <td align="right">RFC:</td> <td><?=$cliente[0]->rfc ?></td>
+                <td align="right">Tipo:</td> <td><?=$material[0]->tipo ?></td>
             </tr>
             <tr>
-                <td align="right">Calle:</td><td><?=$cliente[0]->calle ?></td>
+                <td align="right">Descripción:</td><td><?=$material[0]->descripcion ?></td>
             </tr>
             <tr>
-                <td align="right">Colonia:</td><td><?=$cliente[0]->colonia ?></td>
-            </tr>
-            <tr>
-                <td align="right">Número exterior:</td><td><?=$cliente[0]->numeroInterior ?></td>
-            </tr>
-            <tr>
-                <td align="right">Número interior:</td><td><?=$cliente[0]->codigoPostal ?></td>
-            </tr>
-            <tr>
-                <td align="right">Código postal:</td><td><?=$cliente[0]->ciudad ?></td>
-            </tr>
-            <tr>
-                <td align="right">Ciudad:</td><td><?=$cliente[0]->estado ?></td>
-            </tr>
-            <tr>
-                <td align="right">Estatus:</td><td><?=$cliente[0]->telefono ?></td>
-            </tr>
-            <tr>
-                <td align="right">Teléfono:</td><td><?=$cliente[0]->correoElectronico ?></td>
-            </tr>
-            <tr>
-                <td align="right">CorreoElectrónico:</td><td><?=$cliente[0]->direccionEnvioAlternativa ?></td>
-            </tr>
-            <tr>
-                <td align="right">Dirección de envío alternativa:</td><td><?=$cliente[0]->numeroExterior ?></td>
+                <td align="right">Cantidad:</td><td><?=$material[0]->cantidadDisponible ?> kg.</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<a class="btn btn-danger" href="<?=base_url('index.php/ClientesC/show') ?>">Regresar</a>
+<a class="btn btn-danger" href="<?=base_url('index.php/MaterialesC/show') ?>">Regresar</a>
 
 </div>
 
