@@ -4,7 +4,7 @@
   <div class="container">
 
   <a class="navbar-brand" href="#">
-      <img src="https://ketermex.com/wp-content/uploads/2016/09/logo-keter.png" width="80" height="28">
+      <img src="https://ketermex.com/wp-content/uploads/2016/09/logo-keter.png" width="90" height="33">
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +67,7 @@
 
       <ul class="navbar-nav">
       <li class="nav-item dropdown d-flex">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola Admin <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="45" height="45">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola Admin <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="40" height="40">
           </a>
           <ul class="dropdown-menu">
             <li></li>
