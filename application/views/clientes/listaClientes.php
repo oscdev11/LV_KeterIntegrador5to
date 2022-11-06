@@ -7,7 +7,7 @@
 <br>
 
     <a class="btn btn-danger" href="<?=base_url('index.php/ClientesC/show') ?>">Regresar</a>
-    <a class="btn btn-success" href="<?=base_url('index.php/ClientesC/insertCliente') ?>">Agregar Nuevo Cliente</a> <br><br>
+    <a class="btn btn-success" href="<?=base_url('index.php/ClientesC/insertCliente') ?>">Agregar Nuevo Cliente</a> <br><br><br>
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
