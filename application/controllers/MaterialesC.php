@@ -61,5 +61,12 @@
                     redirect(base_url('index.php/MaterialesC/show'), 'refresh');
                 }
         }
+
+        public function borrarMaterial($id_Material){
+            $this->load->model('MaterialesM');
+            if($data['material'] = $this->MaterialesM->deleteMaterial($id_Material)){
+                redirect(base_url('index.php/MaterialesC/show'), 'refresh');
+            }
+        }
     }
 ?>

@@ -40,6 +40,12 @@
             $this->db->where('id_Material', $id_Material);
             $this->db->update('material', $data);
         }
+
+        function deleteMaterial($id_Material){
+            $this->db->where('id_Material', $id_Material);
+            $this->db->delete('material');
+            return TRUE;
+        }
     }
     
 

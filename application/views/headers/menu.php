@@ -30,7 +30,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Químico
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" onclick="">
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Químico</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Colores</a></li>
