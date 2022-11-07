@@ -1,5 +1,5 @@
 <?php
-//sadsd
+
 class ClientesC extends CI_Controller
 {
     public function show(){
