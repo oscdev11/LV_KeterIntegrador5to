@@ -8,6 +8,27 @@
 
 <div class="container" align="center">
     <div class="col-8">
-        
+
+        <table class="table table-striped">
+            <thead>
+                <th class=""></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="right">Plana:</td>
+                    <td><?=$planta[0]->planta ?></td>
+                </tr>
+                <tr>
+                    <td align="right">Alias:</td>       <td><?=$planta[0]->alias ?></td>
+                </tr>
+                <tr>
+                    <td align="right">telefono:</td>    <td><?=$planta[0]->telefono ?></td>
+                </tr>
+                <tr>
+                    <td align="right">domicilio:</td>   <td><?=$planta[0]->domicilio ?></td>
+                </tr>
+            </tbody>s
+        </table>
     </div>
 </div>
