@@ -21,8 +21,15 @@
         
                 <label for="">Tipo: </label>
                 <select name="tipo" id="" class="form-select shadow p-1 mb-2 bg-body rounded" value="<?=$material[0]->tipo ?>">
-                    <option value="Natural">Natural</option>
-                    <option value="Sintético">Sintético</option>
+                    <?php if($material[0]->tipo=="Natural"):?>
+                        <option value="Natural" selected>Natural</option>
+                        <option value="Sintético">Sintético</option>
+                    <?php else : ?>
+                        <option value="Natural">Natural</option>
+                        <option value="Sintético"  selected>Sintético</option>
+                    <?php endif ?>
+                  
+                    
                 </select>
         
                 <label for="">Descripción: </label>
