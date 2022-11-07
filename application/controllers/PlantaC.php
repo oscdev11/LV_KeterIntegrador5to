@@ -44,6 +44,24 @@ class PlantaC extends CI_Controller{
         redirect(base_url('index.php/PlantaC/show'), 'refresh');
     }
     }
-    
+
+    public function updatePlanta(){
+        $this->load->model('PlantaM');
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('nombre', 'nombre', 'required');
+        
+        if ($this->form_validation->run() == FALSE){
+            $this->load->view('headers/head.php');
+            $this->load->view('headers/menu.php');
+            $this->load->view('plantas/updatePlanta');
+            $this->load->view('headers/footer.php');
+    }
+    else{
+        $this->PlantaM->updatePlanta();
+        redirect(base_url('index.php/PlantaC/show'), 'refresh');
+    }
+    }
+
 }
 ?>
