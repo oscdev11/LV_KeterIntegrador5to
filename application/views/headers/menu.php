@@ -33,7 +33,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="<?=base_url('index.php/QuimicosC/show') ?>">Administrar Químico</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Colores</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/ColoresC/show') ?>">Administrar Colores</a></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Tratamientos</a></li>
           </ul>
         </li>
@@ -67,7 +67,7 @@
 
       <ul class="navbar-nav">
       <li class="nav-item dropdown d-flex">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola Admin <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="40" height="40">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola Admin <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="30" height="30">
           </a>
           <ul class="dropdown-menu">
             <li></li>
