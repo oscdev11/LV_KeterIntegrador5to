@@ -34,7 +34,7 @@
             <li><a class="dropdown-item" href="<?=base_url('index.php/QuimicosC/show') ?>">Administrar Químico</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/ColoresC/show') ?>">Administrar Colores</a></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Tratamientos</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/TratamientosC/show') ?>">Administrar Tratamientos</a></li>
           </ul>
         </li>
 
