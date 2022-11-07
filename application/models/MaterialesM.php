@@ -28,6 +28,7 @@
             $this->db->insert('material', $data);
         }
 
+        //editar información de Material
         function updateMaterial($id_Material){
             $data = array(
                 'nombre' => $this->input->post('nombre'),
@@ -41,6 +42,7 @@
             $this->db->update('material', $data);
         }
 
+        //borrar registro de Material
         function deleteMaterial($id_Material){
             $this->db->where('id_Material', $id_Material);
             $this->db->delete('material');

@@ -23,7 +23,7 @@
         <tbody>
             <?php foreach ($materiales as $key): ?> 
                 <tr class="w-25 p-3">
-                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/MaterialesC/detalleMaterial/').$key->id_Material ?>">Ver</a> 
+                    <td align="center" class="w-auto p-3 align-middle"> <!-- <a class="btn btn-warning" href="<?=base_url('index.php/MaterialesC/detalleMaterial/').$key->id_Material ?>">Ver</a> -->
                      <a class="btn btn-primary" href="<?=base_url('index.php/MaterialesC/updateMaterial/').$key->id_Material ?>">Editar</a> 
                      <a class="btn btn-danger" href="<?=base_url('index.php/MaterialesC/borrarMaterial/').$key->id_Material ?>">Eliminar</a>
                 </td>
