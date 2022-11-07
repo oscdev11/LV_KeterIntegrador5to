@@ -18,7 +18,7 @@
                 <input type="text" class="form-control shadow p-1 mb-2 bg-body rounded" name="fabricante">
         
                 <label for="">Descripción: </label>
-                <input type="text" class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion">
+                <textarea class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion" id="" cols="1" rows="1"></textarea>
 
                 <label for="">Cantidad en mililitros: </label>
                 <input type="number" class="form-control shadow p-1 mb-2 bg-body rounded" name="cantidadDisponible" min="1">

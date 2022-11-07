@@ -6,8 +6,7 @@
 <div class="alert alert-success align-middle" role="alert" align="center"><h5>Administrar Químicos</h5></div>
 <br>
 
-    <a class="btn btn-danger" href="<?=base_url('index.php/ClientesC/show') ?>">Regresar</a>
-    <a class="btn btn-success" href="<?=base_url('index.php/QuimicosC/insertQuimico') ?>">Agregar Nuevo Químico</a> <br><br><br>
+    <a class="btn btn-success" href="<?=base_url('index.php/QuimicosC/insertQuimico') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Químico</a> <br><br><br>
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">

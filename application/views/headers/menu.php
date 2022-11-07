@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
 
-  <div class="container">
+  <div class="container-fluid">
 
   <a class="navbar-brand" href="#">
       <img src="https://ketermex.com/wp-content/uploads/2016/09/logo-keter.png" width="90" height="33">

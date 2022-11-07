@@ -19,6 +19,7 @@
         
                 <label for="">Descripción: </label>
                 <input type="text" class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion" value="<?=$quimico[0]->descripcion ?>">
+                <textarea class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion" id="" cols="1" rows="1" value="<?=$quimico[0]->descripcion ?>"></textarea>
 
                 <label for="">Cantidad disponible en kg: </label>
                 <input type="number" class="form-control shadow p-1 mb-2 bg-body rounded" name="cantidadDisponible" min="1" value="<?=$quimico[0]->cantidadDisponible ?>">
