@@ -1,9 +1,10 @@
+<div class="container-fluid">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Detalles generales de material: <b><?=$material[0]->nombre ?></h5></div>
+    <br>
+</div>
 
 <div class="container">
-
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Detalles generales de material: <b><?=$material[0]->nombre ?></b></h5></div>
-
 
 <div class="container" align="center">
     <div class="col-8">

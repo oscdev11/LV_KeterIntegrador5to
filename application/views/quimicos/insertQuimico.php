@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <br>
-    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Material</h5></div>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Químico</h5></div>
     <br>
 </div>
 
@@ -8,7 +8,7 @@
 
     <?php echo validation_errors(); ?>
 
-    <form action="<?=base_url('index.php/MaterialesC/insertMaterial') ?>" method="POST">
+    <form action="<?=base_url('index.php/QuimicosC/insertQuimico') ?>" method="POST">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -19,16 +19,10 @@
                 <label for="">Fabricante: </label>
                 <input type="text" class="form-control shadow p-1 mb-2 bg-body rounded" name="fabricante">
         
-                <label for="">Tipo: </label>
-                <select name="tipo" id="" class="form-select shadow p-1 mb-2 bg-body rounded">
-                    <option value="Natural">Natural</option>
-                    <option value="Sintético">Sintético</option>
-                </select>
-        
                 <label for="">Descripción: </label>
-                <input type="text" class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion">
+                <textarea class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion" id="" cols="1" rows="1"></textarea>
 
-                <label for="">Cantidad disponible en kg: </label>
+                <label for="">Cantidad en mililitros: </label>
                 <input type="number" class="form-control shadow p-1 mb-2 bg-body rounded" name="cantidadDisponible" min="1">
 
             </div> 
@@ -37,7 +31,7 @@
 <br><br>
 
     <div class="container" align="center">
-        <a class="btn btn-danger" href="<?=base_url('index.php/MaterialesC/show') ?>">Cancelar</a>
+        <a class="btn btn-danger" href="<?=base_url('index.php/QuimicosC/show') ?>">Cancelar</a>
         <input class="btn btn-secondary" type="reset">
         <input class="btn btn-success" type="submit">
         
