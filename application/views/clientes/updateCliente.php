@@ -1,9 +1,15 @@
+<div class="container-fluid">
+
+<br>
+<form action="<?=base_url('index.php/ClientesC/updateCliente/').$cliente[0]->id_Cliente ?>" method="POST">
+<div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Cliente: <b><?=$cliente[0]->alias ?></b></h5></div>
+<br>
+
+</div>
+
 <div class="container">
 
 <form action="<?=base_url('index.php/ClientesC/updateCliente/').$cliente[0]->id_Cliente ?>" method="POST">
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Cliente: <b><?=$cliente[0]->alias ?></b></h5></div>
-<br>
 
     <?php echo validation_errors(); ?>
 

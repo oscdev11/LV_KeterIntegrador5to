@@ -1,10 +1,10 @@
-
+<div class="container-fluid">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Administrar Clientes</h5></div>
+    <br>
+</div>
 
 <div class="container" style="width: 80%; height: 80%">
-
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Administrar Clientes</h5></div>
-<br>
 
     <a class="btn btn-success" href="<?=base_url('index.php/ClientesC/insertCliente') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Cliente</a> <br><br><br>
 

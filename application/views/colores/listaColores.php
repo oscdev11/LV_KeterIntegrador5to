@@ -1,9 +1,12 @@
-
-<div class="container" style="width: 80%; height: 80%">
+<div class="container-fluid">
 
 <br>
 <div class="alert alert-success align-middle" role="alert" align="center"><h5>Administrar Colores</h5></div>
 <br>
+
+</div>
+
+<div class="container" style="width: 80%; height: 80%">
 
     <a class="btn btn-success" href="<?=base_url('index.php/ColoresC/insertColor') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Color</a> <br><br><br>
 

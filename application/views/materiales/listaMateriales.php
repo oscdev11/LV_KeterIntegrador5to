@@ -1,10 +1,12 @@
-
-
-<div class="container" style="width: 80%; height: 80%">
+<div class="container-fluid">
 
 <br>
 <div class="alert alert-success align-middle" role="alert" align="center"><h5>Administrar Materiales</h5></div>
 <br>
+
+</div>
+
+<div class="container" style="width: 80%; height: 50%">
 
     <a class="btn btn-success" href="<?=base_url('index.php/MaterialesC/insertMaterial') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Material</a> <br><br><br>
 

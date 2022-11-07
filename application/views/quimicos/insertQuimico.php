@@ -1,8 +1,10 @@
-<div class="container">
+<div class="container-fluid">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Químico</h5></div>
+    <br>
+</div>
 
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Químico</h5></div>
-<br>
+<div class="container">
 
     <?php echo validation_errors(); ?>
 

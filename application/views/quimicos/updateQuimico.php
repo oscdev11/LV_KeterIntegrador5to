@@ -1,9 +1,11 @@
-<div class="container">
+<div class="container-fluid">
+    <form action="<?=base_url('index.php/QuimicosC/updateQuimico/').$quimico[0]->id_Quimico ?>" method="POST">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Quimico: <b><?=$quimico[0]->nombre ?></div>
+    <br>
+</div>
 
-<form action="<?=base_url('index.php/QuimicosC/updateQuimico/').$quimico[0]->id_Quimico ?>" method="POST">
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Quimico: <b><?=$quimico[0]->nombre ?></b></h5></div>
-<br>
+<div class="container">
 
     <?php echo validation_errors(); ?>
 

@@ -1,9 +1,11 @@
-<div class="container">
+<div class="container-fluid">
+    <form action="<?=base_url('index.php/MaterialesC/updateMaterial/').$material[0]->id_Material ?>" method="POST">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Material: <b><?=$material[0]->nombre ?></h5></div>
+    <br>
+</div>
 
-<form action="<?=base_url('index.php/MaterialesC/updateMaterial/').$material[0]->id_Material ?>" method="POST">
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Material: <b><?=$material[0]->nombre ?></b></h5></div>
-<br>
+<div class="container">
 
     <?php echo validation_errors(); ?>
 

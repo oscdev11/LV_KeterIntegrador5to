@@ -1,9 +1,11 @@
-<div class="container">
+<div class="container-fluid">
+    <form action="<?=base_url('index.php/ColoresC/updateColor/').$color[0]->id_Color ?>" method="POST">
+    <br>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Color: <b><?=$color[0]->nombreColor ?></h5></div>
+    <br>
+</div>
 
-<form action="<?=base_url('index.php/ColoresC/updateColor/').$color[0]->id_Color ?>" method="POST">
-<br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar Color: <b><?=$color[0]->nombreColor ?></b></h5></div>
-<br>
+<div class="container">
 
     <?php echo validation_errors(); ?>
 
