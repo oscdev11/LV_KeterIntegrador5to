@@ -57,7 +57,7 @@
             Planta
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Planta</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/PlantaC/show') ?>">Administrar Planta</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/userAdminC/show') ?>">Usuario Administrador</a></li>
           </ul>
