@@ -8,7 +8,7 @@
             return $query->result();
         }
 
-        // obtener detalles del usuario administrador
+        //obtener detalles del usuario administrador
         function getUserAdmin($id_UserAdmin){
             $this->db->where('id_UserAdmin', $id_UserAdmin);
             $query = $this->db->get('UserAdmin');
