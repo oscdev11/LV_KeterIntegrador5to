@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <form action="<?=base_url('index.php/PlantaC/updatePlanta/').$planta[0]->id_Planta ?>)" method="POST">
     <br>
-    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar i nueva Planta</h5></div>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar planta: <?=$planta[0]->nombre ?></h5></div>
     <br>
 </div>
 

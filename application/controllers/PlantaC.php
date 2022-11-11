@@ -46,6 +46,7 @@ else{
     public function updatePlanta($id_Planta){
         $this->load->model('PlantaM');
         $data['planta'] = $this->PlantaM->getPlanta($id_Planta);
+        $data['administradores'] = $this->PlantaM->getAdmin();
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->form_validation->set_rules('nombre', 'nombre', 'required');
@@ -53,7 +54,7 @@ else{
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
-            $this->load->view('plantas/updatePlanta',$data);
+            $this->load->view('plantas/updatePlanta',$data, $data);
             $this->load->view('headers/footer.php');
         } else{
             $this->PlantaM->updatePlanta($id_Planta);
