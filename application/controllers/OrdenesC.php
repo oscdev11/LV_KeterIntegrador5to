@@ -23,7 +23,7 @@ class OrdenesC extends CI_Controller
     //FUNCION BOTON INSERTAR
     public function insertOrden(){
         $this->load->model('OrdenesM');
-        $data['ordenes'] = $this->OrdenesM->getAdmin();
+        $data['ordenes'] = $this->OrdenesM->getCliente();
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
