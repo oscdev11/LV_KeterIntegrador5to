@@ -3,8 +3,6 @@ class PlantaC extends CI_Controller{
 
     //funcion ver pantalla principal
     public function show(){
-
-        
        $this->load->model('PlantaM');
         $data['plantas'] = $this->PlantaM->getPlantas();
         
@@ -18,14 +16,16 @@ class PlantaC extends CI_Controller{
 //funcion agregar planta
 public function insertPlanta(){
     $this->load->model('PlantaM');
+    $data['administradores'] = $this->PlantaM->getAdmin();
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
-    //$this->form_validation->set_rules('nombre', 'nombre', 'required');
+    
+    $this->form_validation->set_rules('nombre', 'nombre', 'required');
     
     if ($this->form_validation->run() == FALSE){
         $this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
-        $this->load->view('plantas/insertPlanta.php');
+        $this->load->view('plantas/insertPlanta.php', $data);
         $this->load->view('headers/footer.php');
 }
 else{
