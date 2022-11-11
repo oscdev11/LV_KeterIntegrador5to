@@ -6,6 +6,11 @@
             return $query->result();
         }
 
+        function getAdmin(){
+            $query = $this->db->get('userAdmin');
+            return $query->result();
+        }
+
 
         function getPlanta($id_Planta){
             $this->db->where('id_Planta', $id_Planta);
