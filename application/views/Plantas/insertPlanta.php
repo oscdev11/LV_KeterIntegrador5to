@@ -13,8 +13,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
-                <label for="">admin</label>
-                <select id="" name="id_UserAdmin" class="form-control shadow p-1 mb-3 bg-body rounded">
+                <select hidden="hidden" id="" name="id_UserAdmin" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($administradores as $key): ?>
                     <option value="<?=$key->id_UserAdmin ?>"><?=$key->id_UserAdmin ?></option>
                     <?php endforeach?>

@@ -25,7 +25,7 @@
 
                     <td class="w-auto p-3 align-middle"><?=$key->id_UserAdmin ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombreUsuario ?></td>
-                    <td class="w-auto p-3 align-middle"><?=$key->contra ?></td>
+                    <td class="w-auto p-3 align-middle"><?=md5($key->contra) ?></td>
                 </tr>
             <?php endforeach ?>
         </tbody>

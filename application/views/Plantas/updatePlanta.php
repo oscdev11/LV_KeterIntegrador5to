@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <form action="<?=base_url('index.php/PlantaC/updatePlanta/').$planta[0]->id_Planta ?>)" method="POST">
+    <form action="<?=base_url('index.php/PlantaC/updatePlanta/').$planta[0]->id_Planta ?>" method="POST">
     <br>
     <div class="alert alert-success align-middle" role="alert" align="center"><h5>Editar planta: <?=$planta[0]->nombre ?></h5></div>
     <br>
@@ -35,7 +35,7 @@
     <div class="container" align="center">
         <a class="btn btn-danger" href="<?=base_url('index.php/PlantaC/show') ?>">Cancelar</a>
         <input class="btn btn-secondary" type="reset">
-        <input class="btn btn-success" type="submit">
+        <input class="btn btn-success" type="submit" value="Guardar">
         
     </div>
     
