@@ -14,11 +14,13 @@
         <thead class="table-dark">
             <th align="center" class="w-25 p-3">Acciones</th>
             <th class="w-auto p-3">Pedido</th>
+
             <th class="w-auto p-3">Cliente </th>
             <th class="w-auto p-3">Domicilio de envio </th>
             <th class="w-auto p-3">Fecha registro</th>
             <th class="w-auto p-3">Fecha de entrega</th>
             <th class="w-auto p-3">Estado</th>
+
             <th class="w-auto p-3">Reporte</th>
         </thead>
         
@@ -27,13 +29,23 @@
         
                 <tr class="w-25 p-3">
                     <td>
-                    <a class="btn btn-primary" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_Planta ?>">Editar</a> 
-                    <a class="btn btn-danger" href="<?=base_url('index.php/OrdenesC/borrarPlanta/').$key->id_Planta ?>">Eliminar</a>
+                        <a class="btn btn-primary" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_OrdenProduccion ?>">Editar</a> 
+                        <a class="btn btn-danger" href="<?=base_url('index.php/OrdenesC/borrarOrden/').$key->id_OrdenProduccion ?>">Eliminar</a>
                     </td>
                     
-                  
+                    <td>
+                            <a class="btn btn-warning btn-sm" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_OrdenProduccion ?>">Administrar pedido</a> 
+                            <td class="w-auto p-3 align-middle"><?=$key->id_Cliente ?></td>
+                            <td class="w-auto p-3 align-middle"><?=$key->domicilioEnvio ?></td>
+                            <td class="w-auto p-3 align-middle"><?=$key->fechaCaptura ?></td>
+                            <td class="w-auto p-3 align-middle"><?=$key->fechaEntrega ?></td>
+                            <td class="w-auto p-3 align-middle"><?=$key->estado ?></td>
+
+                            <td>
+                                <a class="btn btn-secondary btn-sm" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_Planta ?>">PDF </a> 
+                            </td>
                     
-                    
+                    </td>
                 
                 </tr>
             <?php endforeach ?>

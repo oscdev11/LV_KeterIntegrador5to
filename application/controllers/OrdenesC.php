@@ -11,7 +11,15 @@ class OrdenesC extends CI_Controller
         $this->load->view('ordenes/listaOrdenes.php', $data);
         $this->load->view('headers/footer.php');
     }
+    //FUNCION BOTON BORRAR
+    public function borrarOrden($id_OrdenProduccion){
+        $this->load->model('OrdenesM');
+        if($data['ordene'] = $this->OrdenesM->deleteOrden($id_OrdenProduccion)){
+            redirect(base_url('index.php/ClientesC/show'), 'refresh');
+        }
+    }
 /*
+//FUNCION BOTON VER 
     public function detalleCliente($id_Cliente){
         $this->load->model('ClientesM');
         $data['cliente'] = $this->ClientesM->getCliente($id_Cliente);
@@ -22,13 +30,7 @@ class OrdenesC extends CI_Controller
         $this->load->view('headers/footer.php');
     }
 
-    public function borrarCliente($id_Cliente){
-        $this->load->model('ClientesM');
-        if($data['cliente'] = $this->ClientesM->deleteCliente($id_Cliente)){
-            redirect(base_url('index.php/ClientesC/show'), 'refresh');
-        }
-    }
-
+//FUNCION BOTON INSERTAR
     public function insertCliente(){
         $this->load->model('ClientesM');
         $this->load->helper(array('form', 'url'));
@@ -50,7 +52,7 @@ class OrdenesC extends CI_Controller
                         redirect(base_url('index.php/ClientesC/show'), 'refresh');
                 }
     }
-
+//FUNCION BOTON ACTUALIZAR
     public function updateCliente($id_Cliente){
         $this->load->model('ClientesM');
 

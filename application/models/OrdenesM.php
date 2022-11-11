@@ -5,20 +5,23 @@ class OrdenesM extends CI_Model
         $query = $this->db->get('ordenproduccion');
         return $query->result();
     }
-    
+
+//FUNCION BOTON ELIMINAR 
+function deleteOrden($id_OrdenProduccion){
+    $this->db->where('id_OrdenProduccion', $id_OrdenProduccion);
+    $this->db->delete('ordenproduccion');
+    return TRUE;
+}
+
 /*
+//FUNCION BOTON VER 
     function getCliente($id_Cliente){
         $this->db->where('id_Cliente', $id_Cliente);
         $query = $this->db->get('cliente');
         return $query->result();
     }
 
-    function deleteCliente($id_Cliente){
-        $this->db->where('id_Cliente', $id_Cliente);
-        $this->db->delete('cliente');
-        return TRUE;
-    }
-
+//FUNCION BOTON INSERTAR
     function insertCliente(){
         $data = array(
             'razonSocial' => $this->input->post('razonSocial'),
@@ -38,7 +41,7 @@ class OrdenesM extends CI_Model
     
             $this->db->insert('cliente', $data);
     }
-
+//FUNCION BOTON EDITAR
     function updateCliente($id_Cliente){
         $data = array(
             'razonSocial' => $this->input->post('razonSocial'),
