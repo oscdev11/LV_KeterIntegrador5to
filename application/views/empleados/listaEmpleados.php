@@ -13,7 +13,6 @@
             <th class="w-auto p-3">Número trabajador</th>
             <th class="w-auto p-3">Sexo</th>
             <th class="w-auto p-3">Estatus</th>
-            
         </thead>
             <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">
