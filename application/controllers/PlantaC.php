@@ -19,7 +19,7 @@ public function insertPlanta(){
     $data['administradores'] = $this->PlantaM->getAdmin();
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
-    
+
     $this->form_validation->set_rules('nombre', 'nombre', 'required');
     
     if ($this->form_validation->run() == FALSE){
@@ -33,7 +33,6 @@ else{
     redirect(base_url('index.php/PlantaC/show'), 'refresh');
     }
 }
-    /*
 
 //funcion borrar Planta
     public function borrarPlanta($id_Planta){
@@ -42,10 +41,11 @@ else{
             redirect(base_url('index.php/PlantaC/show'), 'refresh');
         }
     }           
+        //$data['administradores'] = $this->PlantaM->getAdmin();
 
-//funcion actualizar platnta
-    public function updatePlanta(){
+    public function updatePlanta($id_Planta){
         $this->load->model('PlantaM');
+        $data['planta'] = $this->PlantaM->getPlanta($id_Planta);
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->form_validation->set_rules('nombre', 'nombre', 'required');
@@ -53,14 +53,12 @@ else{
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
-            $this->load->view('plantas/updatePlanta');
+            $this->load->view('plantas/updatePlanta',$data);
             $this->load->view('headers/footer.php');
+        } else{
+            $this->PlantaM->updatePlanta($id_Planta);
+            redirect(base_url('index.php/PlantaC/show'), 'refresh');
+        }
     }
-    else{
-        $this->PlantaM->updatePlanta();
-        redirect(base_url('index.php/PlantaC/show'), 'refresh');
-    }
-    }
-*/
 }
 ?>
