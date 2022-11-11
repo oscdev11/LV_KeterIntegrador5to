@@ -17,7 +17,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?=base_url('index.php/') ?>">Órdenes</a>
+          <a class="nav-link" href="<?=base_url('index.php/OrdenesC/show') ?>">Órdenes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=base_url('index.php/ClientesC/show') ?>">Clientes</a>
@@ -57,9 +57,9 @@
             Planta
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Planta</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/PlantaC/show') ?>">Administrar Planta</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Usuario Administrador</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/userAdminC/show') ?>">Usuario Administrador</a></li>
           </ul>
         </li>
    
