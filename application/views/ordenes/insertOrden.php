@@ -15,9 +15,6 @@
             <div class="col-4">
 
 
-                
-
-
                 <label for="">Cliente</label>
                 <select id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($ordenes as $key): ?>
