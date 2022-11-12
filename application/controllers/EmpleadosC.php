@@ -2,7 +2,7 @@
 
 class EmpleadosC extends CI_Controller
 {
-    //vista general de Empleados
+    //vista general
     public function show(){
         $this->load->model('EmpleadosM');
         $data['empleados'] = $this->EmpleadosM->getEmpleados();
@@ -12,7 +12,8 @@ class EmpleadosC extends CI_Controller
         $this->load->view('empleados/listaEmpleados.php', $data);
         $this->load->view('headers/footer.php');
     }
-    public function detalleEmpleado($id_Cliente){
+    //funcion del boton ver
+    public function detalleEmpleado($id_Empleado ){
         $this->load->model('EmpleadosM');
         $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
 

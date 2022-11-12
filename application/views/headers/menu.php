@@ -44,7 +44,7 @@
             Departamento
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Personal</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/EmpleadosC/show') ?>">Administrar Empleado</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/DepartamentosC/show') ?>">Administrar Departamentos</a></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Puestos</a></li>

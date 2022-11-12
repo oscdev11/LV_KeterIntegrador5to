@@ -16,7 +16,7 @@
         </thead>
             <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">
-                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="">Ver</a> 
+                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/EmpleadosC/detalleEmpleado/').$key->id_Empleado ?>">Ver</a> 
                      <a class="btn btn-primary" href="">Editar</a> 
                      <a class="btn btn-danger" href="">Eliminar</a>
                 </td>
