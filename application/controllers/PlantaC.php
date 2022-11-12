@@ -46,10 +46,9 @@ else{
     public function updatePlanta($id_Planta){
         $this->load->model('PlantaM');
         $data['planta'] = $this->PlantaM->getPlanta($id_Planta);
-        //$data['administradores'] = $this->PlantaM->getAdmin();
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('nombre', 'nombre', 'required');
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('nombre', 'nombre', 'required');
         
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');
