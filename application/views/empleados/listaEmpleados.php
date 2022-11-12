@@ -4,7 +4,7 @@
     <br>
 </div>
 <div class="container" style="width: 80%; height: 80%">
-<a class="btn btn-success" href=""><i class="fa-solid fa-plus"></i> Agregar Nuevo Empleado</a> <br><br><br>
+<a class="btn btn-success" href="<?=base_url('index.php/EmpleadosC/insertEmpleado') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Empleado</a> <br><br><br>
 
 <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
@@ -16,7 +16,7 @@
         </thead>
             <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">
-                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="">Ver</a> 
+                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/EmpleadosC/detalleEmpleado/').$key->id_Empleado ?>">Ver</a> 
                      <a class="btn btn-primary" href="">Editar</a> 
                      <a class="btn btn-danger" href="">Eliminar</a>
                 </td>
