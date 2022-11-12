@@ -4,7 +4,7 @@
     <br>
 </div>
 <div class="container" style="width: 80%; height: 80%">
-<a class="btn btn-success" href=""><i class="fa-solid fa-plus"></i> Agregar Nuevo Empleado</a> <br><br><br>
+<a class="btn btn-success" href="<?=base_url('index.php/EmpleadosC/insertEmpleado') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Empleado</a> <br><br><br>
 
 <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">

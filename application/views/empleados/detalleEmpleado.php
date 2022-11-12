@@ -11,7 +11,7 @@
 
         <table class="table table-striped">
             <thead>
-                <th class="w-25 p-3"></th>
+                <th class="center"></th>
                 <th></th>
             </thead>
             <tbody>

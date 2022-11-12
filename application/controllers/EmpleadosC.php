@@ -22,5 +22,22 @@ class EmpleadosC extends CI_Controller
         $this->load->view('empleados/detalleEmpleado.php', $data);
         $this->load->view('headers/footer.php');
     }
+    //funcion del boton de agregar
+    public function insertEmpleado(){
+        $this->load->model('EmpleadosM');
+        $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('nombre', 'id_Puesto', 'required');
+
+            if($this->form_validation->run() == FALSE){
+                $this->load->view('headers/head.php');
+                $this->load->view('headers/menu.php');
+                $this->load->view('headers/footer.php');
+                $this->load->view('empleados/insertEmpleado');
+            } else{
+                $this->EmpleadosM->insertEmpleado();
+                redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
+            }
+    }
 }
 ?>
