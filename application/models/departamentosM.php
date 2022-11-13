@@ -15,7 +15,7 @@
             return $query->result();
         }
 
-        //get información del la tabla Plantas
+        //get registros del la tabla Planta
         function getPlantas(){
             $query = $this->db->get('planta');
             return $query->result();
@@ -39,11 +39,14 @@
             $this->db->update('departamento', $data);
         }
 
-        //borrar registro de Material
+        //borrar registro de Departamento (únicamente si no tiene registros en puestos)
         function deleteDepartamento($id_Departamento){
             $this->db->where('id_Departamento', $id_Departamento);
             $this->db->delete('departamento');
             return TRUE;
         }
+
+        // listaPuestos-----------------------------------------------------------------------------
+
     }
 ?>
