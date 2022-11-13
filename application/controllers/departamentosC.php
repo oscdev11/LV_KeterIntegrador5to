@@ -59,5 +59,9 @@
                 redirect(base_url('index.php/DepartamentosC/show'), 'refresh');
             }
         }
+
+        //listaPuestos--------------------------------------------------------
+
+
     }
 ?>
