@@ -5,7 +5,13 @@ class EmpleadosM extends CI_Model
     function getEmpleados(){
         $query = $this->db->get('Empleado');
         return $query->result();
-    } 
+    }
+    //informacion de otra tabla 
+    function getDepartamentos(){
+        $query = $this->db->get('departamento');
+        return $query->result();
+    }
+     
     //para ventana de detalle
     function getEmpleado($id_Empleado){
         $this->db->where('id_Empleado', $id_Empleado);
