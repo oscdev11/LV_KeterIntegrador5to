@@ -11,6 +11,10 @@ class OrdenesM extends CI_Model
         $query = $this->db->get('cliente');
         return $query->result();
     }
+    function getPlantaId(){
+        $query = $this->db->get('planta');
+        return $query->result();
+    }   
 
 //FUNCION BOTON ELIMINAR 
 function deleteOrden($id_OrdenProduccion){
@@ -20,7 +24,7 @@ function deleteOrden($id_OrdenProduccion){
 }
 
 //FUNCION BOTON INSERTAR
-function insertPlanta(){
+function insertOrden(){
     $data = array(
         'id_UserAdmin' => $this->input->post('id_UserAdmin'),
         'nombre' => $this->input->post('nombre'),

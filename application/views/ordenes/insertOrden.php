@@ -15,13 +15,42 @@
             <div class="col-4">
 
 
-                <label for="">Cliente</label>
-                <select id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($ordenes as $key): ?>
+            <select hidden="hidden" id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($administradores as $key): ?>
+                    <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
+                    <?php endforeach?>
+                </select>
+
+                <select hidden="hidden" id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($administradores as $key): ?>
                     <option value="<?=$key->id_Cliente ?>"><?=$key->id_Cliente ?></option>
+                    <?php endforeach?>
+                </select>
+
+
+
+                <label for="">Razón social</label>
+                <select id="" name="razonSocial" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($clientesRazon as $key): ?>
+                    <option value="<?=$key->razonSocial ?>"><?=$key->razonSocial ?></option>
                     <?php endforeach?>
 
 
+
+
+                <label for="">Fecha de captura: </label>
+                <input type="date" class="form-control shadow p-1 mb-3 bg-body rounded" name="fechaCaptura">
+
+                <label for="">Fecha de entrega: </label>
+                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="fechaEntrega">
+
+                <label for="">Domicilio de entrega: </label>
+                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="domicilioEnvio">
+
+                <label for="">Comentarios: </label>
+                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="comentarios">
+
+         creo que falta el status 
 
                 </select>
             </div> 
