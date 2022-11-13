@@ -15,17 +15,19 @@
             <div class="col-4">
 
 
-            <select hidden="hidden" id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($administradores as $key): ?>
+               
+                <select hidden="hidden" id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($plantaId as $key): ?>
                     <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
                     <?php endforeach?>
                 </select>
 
                 <select hidden="hidden" id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($administradores as $key): ?>
+                    <?php foreach ($clienteId as $key): ?>
                     <option value="<?=$key->id_Cliente ?>"><?=$key->id_Cliente ?></option>
                     <?php endforeach?>
                 </select>
+
 
 
 
@@ -34,7 +36,7 @@
                     <?php foreach ($clientesRazon as $key): ?>
                     <option value="<?=$key->razonSocial ?>"><?=$key->razonSocial ?></option>
                     <?php endforeach?>
-
+                </select>
 
 
 
@@ -42,7 +44,7 @@
                 <input type="date" class="form-control shadow p-1 mb-3 bg-body rounded" name="fechaCaptura">
 
                 <label for="">Fecha de entrega: </label>
-                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="fechaEntrega">
+                <input type="date" class="form-control shadow p-1 mb-3 bg-body rounded" name="fechaEntrega">
 
                 <label for="">Domicilio de entrega: </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="domicilioEnvio">
@@ -50,7 +52,13 @@
                 <label for="">Comentarios: </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="comentarios">
 
-         creo que falta el status 
+
+               <label for="">Estado: </label>
+                <select name="estado" id="" class="form-select shadow p-1 mb-2 bg-body rounded">
+                    <option value="En espera">En espera</option>
+                    <option value="En proceso">En proceso</option>
+                    <option value="Terminado">Terminado</option>
+                </select>
 
                 </select>
             </div> 
