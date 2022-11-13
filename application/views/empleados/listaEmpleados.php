@@ -17,8 +17,8 @@
             <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">
                     <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/EmpleadosC/detalleEmpleado/').$key->id_Empleado ?>">Ver</a> 
-                     <a class="btn btn-primary" href="">Editar</a> 
-                     <a class="btn btn-danger" href="">Eliminar</a>
+                     <a class="btn btn-primary" href="<?=base_url('index.php/EmpleadosC/updateEmpleado/').$key->id_Empleado ?>">Editar</a> 
+                     <a class="btn btn-danger" href="<?=base_url('index.php/EmpleadosC/borrarEmpleado/').$key->id_Empleado ?>">Eliminar</a>
                 </td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombre ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->numTrabajador  ?></td>

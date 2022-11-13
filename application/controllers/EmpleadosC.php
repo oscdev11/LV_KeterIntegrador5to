@@ -42,5 +42,31 @@ class EmpleadosC extends CI_Controller
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
             }
     }
+    //funcion para borrar un registro
+    public function borrarEmpleado($id_Empleado){
+        $this->load->model('EmpleadosM');
+        if($data['empleado'] = $this->EmpleadosM->deleteEmpleado($id_Empleado)){
+            redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
+        }
+    }
+    //funcion para actualizar la informacion
+    public function updateEmpleado($id_Empleado){
+        $this->load->model('EmpleadosM');
+        $data1['puestos'] = $this->EmpleadosM->getPuestos();
+        $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
+        $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('numTrabajador', 'nombre', 'required');
+
+            if($this->form_validation->run() == FALSE){
+                $this->load->view('headers/head.php');
+                $this->load->view('headers/menu.php');
+                $this->load->view('headers/footer.php');
+                $this->load->view('empleados/updateEmpleado', $data,$data1);
+            } else{
+                $this->EmpleadosM->updateEmpleado($id_Empleado);
+                redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
+            }
+    }
 }
 ?>
