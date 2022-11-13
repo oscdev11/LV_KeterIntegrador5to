@@ -7,8 +7,8 @@ class EmpleadosM extends CI_Model
         return $query->result();
     }
     //informacion de otra tabla 
-    function getDepartamentos(){
-        $query = $this->db->get('departamento');
+    function getPuestos(){
+        $query = $this->db->get('puesto');
         return $query->result();
     }
      
@@ -21,7 +21,7 @@ class EmpleadosM extends CI_Model
     //para la ventana de agregar
     function insertEmpleado(){
         $data = array(
-            'nombreTratamiento' => $this->input->post('nombreTratamiento'),
+            'numTrabajador' => $this->input->post('numTrabajador'),
             'id_Puesto' => $this->input->post('id_Puesto'),
             'numTrabajador' => $this->input->post('numTrabajador'),
             'nombre' => $this->input->post('nombre'),
@@ -30,7 +30,9 @@ class EmpleadosM extends CI_Model
             'domicilio' => $this->input->post('domicilio'),
             'RFC' => $this->input->post('RFC'),
             'CURP' => $this->input->post('CURP'),
+            'NSS' => $this->input->post('NSS'),
             'fechaIngreso' => $this->input->post('fechaIngreso'),
+            'sexo' => $this->input->post('sexo'),
             'fechaNacimiento' => $this->input->post('fechaNacimiento'),
             'estadoSalud' => $this->input->post('estadoSalud'),
             'observaciones' => $this->input->post('observaciones'),
