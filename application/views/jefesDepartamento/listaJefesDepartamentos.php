@@ -9,10 +9,10 @@
 <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
             <th align="center" class="w-25 p-3">Acciones</th>
-            <th class="w-auto p-3">Nombre</th>
-            <th class="w-auto p-3">Número trabajador</th>
-            <th class="w-auto p-3">Sexo</th>
-            <th class="w-auto p-3">Estatus</th>
+            <th class="w-auto p-3">Id</th>
+            <th class="w-auto p-3">Nombre del empleado</th>
+            <th class="w-auto p-3">Departamento</th>
+            <th class="w-auto p-3">Contraseña</th>
         </thead>
             <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">

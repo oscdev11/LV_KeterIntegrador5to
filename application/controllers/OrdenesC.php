@@ -23,8 +23,14 @@ class OrdenesC extends CI_Controller
     //FUNCION BOTON INSERTAR
     public function insertOrden(){
         $this->load->model('OrdenesM');
-        $data['clientesRazon'] = $this->OrdenesM->getCliente();
-        $data1['plantaId'] = $this->OrdenesM->getPlantaId();
+        //obtener id de la tabla planta
+        $data['plantaId'] = $this->OrdenesM->getPlantaId();
+
+
+        $data['clienteId'] = $this->OrdenesM->clienteId();
+        //obtener la razon social de la tabla clientes 
+        $data['clientesRazon'] = $this->OrdenesM->getClienteRazon();
+        
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
@@ -33,7 +39,7 @@ class OrdenesC extends CI_Controller
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
-            $this->load->view('ordenes/insertOrden.php', $data,$data1);
+            $this->load->view('ordenes/insertOrden.php',$data,$data,$data);
             $this->load->view('headers/footer.php');
     }
     else{
