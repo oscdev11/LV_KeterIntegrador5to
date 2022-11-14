@@ -45,7 +45,15 @@ class EmpleadosM extends CI_Model
 
         $this->db->insert('empleado', $data);
     }
-    //
+    //para eliminar
+    function updateEmpleado($id_Empleado){
+        $data = array(
+            'numTrabajador' => $this->input->post('numTrabajador'),
+        );
+
+        $this->db->where('id_Empleado', $id_Empleado);
+        $this->db->update('empleado', $data);
+    }
     function deleteEmpleado($id_Empleado){
         $this->db->where('id_Empleado', $id_Empleado);
         $this->db->delete('empleado');
