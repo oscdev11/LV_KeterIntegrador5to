@@ -19,8 +19,8 @@
                 <label for="">Departamento: </label>
                 <label for="">Puesto: </label>
 
-                <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded" value="<?=$empleado[0]->id_Puesto?>">
-                    
+                <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <option>Seleccionar</option>
                     <?php foreach ($puestos as $key): ?>
                     <option value="<?=$key->id_Puesto ?>"> <?=$key->nombre ?></option>
                     <?php endforeach?>
