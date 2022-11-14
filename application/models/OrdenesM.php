@@ -6,15 +6,24 @@ class OrdenesM extends CI_Model
         $query = $this->db->get('ordenproduccion');
         return $query->result();
     }
+////////////////////////////////////////////////////////////
+function getPlantaId(){
+    $query = $this->db->get('planta');
+    return $query->result();
+}   
+
+function clienteId(){
+    $query = $this->db->get('cliente');
+    return $query->result();
+}
+
 //funcion informacion de tabla cliente
-    function getCliente(){
+    function getClienteRazon(){
         $query = $this->db->get('cliente');
         return $query->result();
     }
-    function getPlantaId(){
-        $query = $this->db->get('planta');
-        return $query->result();
-    }   
+    
+    
 
 //FUNCION BOTON ELIMINAR 
 function deleteOrden($id_OrdenProduccion){
@@ -26,11 +35,15 @@ function deleteOrden($id_OrdenProduccion){
 //FUNCION BOTON INSERTAR
 function insertOrden(){
     $data = array(
-        'id_UserAdmin' => $this->input->post('id_UserAdmin'),
-        'nombre' => $this->input->post('nombre'),
-        'alias' => $this->input->post('alias'),
-        'telefono' => $this->input->post('telefono'),
-        'domicilio' => $this->input->post('domicilio'),
+        'id_Planta' => $this->input->post('id_Planta'),
+        'id_Cliente' => $this->input->post('id_Cliente'),
+        'razonSocial' => $this->input->post('razonSocial'),
+        'fechaCaptura' => $this->input->post('fechaCaptura'),
+        'fechaEntrega' => $this->input->post('fechaEntrega'),
+        'fechaEntrega' => $this->input->post('fechaEntrega'),
+        'domicilioEnvio' => $this->input->post('fechaEntrega'),
+        'comentarios' => $this->input->post('comentarios'),
+        'estado' => $this->input->post('estado'),
         );
         $this->db->insert('planta', $data);
 }

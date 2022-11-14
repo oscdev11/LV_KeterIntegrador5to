@@ -16,6 +16,7 @@ class PlantaC extends CI_Controller{
 //funcion agregar planta
 public function insertPlanta(){
     $this->load->model('PlantaM');
+    //informacion de otra tabla linea 20
     $data['administradores'] = $this->PlantaM->getAdmin();
     $this->load->helper(array('form', 'url'));
     $this->load->library('form_validation');
