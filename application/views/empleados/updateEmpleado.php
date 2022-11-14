@@ -19,13 +19,12 @@
                 <label for="">Departamento: </label>
                 <label for="">Puesto: </label>
 
-                <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <option>Seleccionar</option>
+                <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded" value="<?=$empleado[0]->id_Puesto?>">
+                    
                     <?php foreach ($puestos as $key): ?>
                     <option value="<?=$key->id_Puesto ?>"> <?=$key->nombre ?></option>
                     <?php endforeach?>
                 </select>
-
               
                 <label for="">Domicilio:   </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="domicilio" value="<?=$empleado[0]->domicilio?>">
