@@ -30,7 +30,7 @@
                     <td class="w-auto p-3 align-middle"><?=$key->id_Departamento ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombre ?></td>
                     <td class="w-auto p-3 align-middle">
-                    <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/showP/').$key->id_Departamento ?>">Agregar Puestos</a> 
+                    <a class="btn btn-primary" href="<?=base_url('index.php/PuestosC/show/').$key->id_Departamento ?>">Agregar Puestos</a> 
                     </td>
                     <td class="w-auto p-3 align-middle">Aquí van los puestos</td>
                 </tr>
