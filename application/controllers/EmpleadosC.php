@@ -52,7 +52,7 @@ class EmpleadosC extends CI_Controller
     //funcion para actualizar la informacion
     public function updateEmpleado($id_Empleado){
         $this->load->model('EmpleadosM');
-        $data1['puestos'] = $this->EmpleadosM->getPuestos();
+        $data['puestos'] = $this->EmpleadosM->getPuestos();
         $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
         $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
@@ -62,7 +62,7 @@ class EmpleadosC extends CI_Controller
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
                 $this->load->view('headers/footer.php');
-                $this->load->view('empleados/updateEmpleado', $data,$data1);
+                $this->load->view('empleados/updateEmpleado', $data,$data);
             } else{
                 $this->EmpleadosM->updateEmpleado($id_Empleado);
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
