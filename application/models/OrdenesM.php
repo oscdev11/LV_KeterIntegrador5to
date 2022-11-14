@@ -12,10 +12,10 @@ function getPlantaId(){
     return $query->result();
 }   
 
-function clienteId(){
+/*function clienteId(){
     $query = $this->db->get('cliente');
     return $query->result();
-}
+}*/
 
 //funcion informacion de tabla cliente
     function getClienteRazon(){
@@ -37,15 +37,13 @@ function insertOrden(){
     $data = array(
         'id_Planta' => $this->input->post('id_Planta'),
         'id_Cliente' => $this->input->post('id_Cliente'),
-        'razonSocial' => $this->input->post('razonSocial'),
         'fechaCaptura' => $this->input->post('fechaCaptura'),
-        'fechaEntrega' => $this->input->post('fechaEntrega'),
         'fechaEntrega' => $this->input->post('fechaEntrega'),
         'domicilioEnvio' => $this->input->post('fechaEntrega'),
         'comentarios' => $this->input->post('comentarios'),
         'estado' => $this->input->post('estado'),
         );
-        $this->db->insert('planta', $data);
+        $this->db->insert('ordenProduccion', $data);
 }
 /*
 //FUNCION BOTON VER 

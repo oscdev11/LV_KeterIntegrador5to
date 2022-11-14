@@ -1,11 +1,12 @@
 <div class="container-fluid">
     <br>
-    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Tratamiento</h5></div>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nueva Orden de Producción</h5></div>
     <br>
 </div>
 
 <div class="container">
-
+    <?php print_r($plantaId) ?>
+    <?php print_r($clientesRazonId) ?>
     <?php echo validation_errors(); ?>
 
     <form action="<?=base_url('index.php/OrdendesC/insertOrden') ?>" method="POST">
@@ -16,25 +17,22 @@
 
 
                
-                <select hidden="hidden" id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
+
+                <select  id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($plantaId as $key): ?>
                     <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
                     <?php endforeach?>
                 </select>
 
-                <select hidden="hidden" id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($clienteId as $key): ?>
-                    <option value="<?=$key->id_Cliente ?>"><?=$key->id_Cliente ?></option>
-                    <?php endforeach?>
-                </select>
+           
 
 
 
 
                 <label for="">Razón social</label>
-                <select id="" name="razonSocial" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($clientesRazon as $key): ?>
-                    <option value="<?=$key->razonSocial ?>"><?=$key->razonSocial ?></option>
+                <select id="" name="id_Cliente" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($clientesRazonId as $key): ?>
+                    <option value="<?=$key->id_Cliente ?>"><?=$key->razonSocial ?></option>
                     <?php endforeach?>
                 </select>
 
