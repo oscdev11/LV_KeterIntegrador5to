@@ -12,7 +12,7 @@
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
-            <th align="center" class="w-25 p-3">Acciones</th>
+            <th align="center" class="w-30 p-3">Acciones</th>
             <th class="w-auto p-3">Planta </th>
             <th class="w-auto p-3">Alias</th>
             <th class="w-auto p-3">Teléfono</th>
@@ -24,8 +24,9 @@
                 
                 <tr class="w-25 p-3">
                     <td>
-                    <a class="btn btn-primary" href="<?=base_url('index.php/PlantaC/updatePlanta/').$key->id_Planta ?>">Editar</a> 
-                    <a class="btn btn-danger" href="<?=base_url('index.php/PlantaC/borrarPlanta/').$key->id_Planta ?>">Eliminar</a>
+                        <a class="btn btn-warning" href="<?=base_url('index.php/dashC/show/').$key->id_Planta ?>">Administrar Planta</a>
+                        <a class="btn btn-primary" href="<?=base_url('index.php/PlantaC/updatePlanta/').$key->id_Planta ?>">Editar</a> 
+                        <a class="btn btn-danger" href="<?=base_url('index.php/PlantaC/borrarPlanta/').$key->id_Planta ?>">Eliminar</a>
                     </td>
                     
                     <td class="w-auto p-3 align-middle"><?=$key->nombre ?></td>

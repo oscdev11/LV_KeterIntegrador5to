@@ -12,6 +12,13 @@
             $query = $this->db->get('puesto');
             return $query->result();
         }
+
+        function insertPuesto(){
+            $data = array(
+                'nombre' => $this->input->post('nombre')
+            );
+            $this->db->insert('departamento', $data);
+        }
     }
     
 ?>

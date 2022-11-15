@@ -12,17 +12,12 @@
 
     <?php echo validation_errors(); ?>
 
-    <form action="<?=base_url('index.php/DepartamentosC/insertDepartamento') ?>" method="POST">
+    <form action="<?=base_url('index.php/PuestosC/insertPuesto') ?>" method="POST">
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
-                <select name="id_Planta" id="" hidden="hidden">
-                    <?php foreach ($departamento as $key): ?>
-                        <option value="<?=$key->id_Departamento ?>"><?=$key->id_Departamento ?></option>
-                    <?php endforeach ?>
-                </select>
-                <label for="">Nombre del departamento: </label>
+                <label for="">Nombre del puesto: </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="nombre">
             </div> 
         </div>
@@ -30,7 +25,7 @@
 <br><br>
 
     <div class="container" align="center">
-        <a class="btn btn-danger" href="<?=base_url('index.php/DepartamentosC/show') ?>">Cancelar</a>
+        <a class="btn btn-danger" href="<?=base_url('index.php/PuestosC/show') ?>">Cancelar</a>
         <input class="btn btn-secondary" type="reset">
         <input class="btn btn-success" type="submit">
         
