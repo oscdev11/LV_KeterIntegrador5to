@@ -1,6 +1,13 @@
 <?php 
 class EmpleadosM extends CI_Model
 {   
+    //Prueva
+    function Dependinamico(){
+        $this->db->order_by('nombre', 'ASC');
+        $query = $this->db->get('departamento');
+        return $query->result();
+    }
+    //Prueva
     //para mostar todos los registros en la pantalla general
     function getEmpleados(){
         $query = $this->db->get('Empleado');

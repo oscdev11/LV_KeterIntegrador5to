@@ -9,7 +9,7 @@
     <?php print_r($clientesRazonId) ?>
     <?php echo validation_errors(); ?>
 
-    <form action="<?=base_url('index.php/OrdendesC/insertOrden') ?>" method="POST">
+    <form action="<?=base_url('index.php/OrdenesC/insertOrden') ?>" method="POST">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -65,7 +65,7 @@
 <br><br>
 
     <div class="container" align="center">
-        <a class="btn btn-danger" href="<?=base_url('index.php/TratamientosC/show') ?>">Cancelar</a>
+        <a class="btn btn-danger" href="<?=base_url('index.php/OrdenesC/show') ?>">Cancelar</a>
         <input class="btn btn-secondary" type="reset">
         <input class="btn btn-success" type="submit">
         
