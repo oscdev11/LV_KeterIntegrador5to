@@ -50,18 +50,6 @@
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Jefes de Departamento</a></li>
           </ul>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Planta
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="<?=base_url('index.php/PlantaC/show') ?>">Administrar Planta</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/userAdminC/show') ?>">Usuario Administrador</a></li>
-          </ul>
-        </li>
-   
       </ul>
 
       <ul class="navbar-nav">
