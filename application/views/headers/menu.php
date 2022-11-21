@@ -3,7 +3,7 @@
 
   <div class="container-fluid">
 
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<?=base_url('index.php/dashC/show') ?>">
       <img src="https://ketermex.com/wp-content/uploads/2016/09/logo-keter.png" width="90" height="33">
     </a>
 
@@ -59,7 +59,7 @@
           <ul class="dropdown-menu">
             <li></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Cerrar sesión</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/PlantaC/show') ?>">Cerrar sesión</a></li>
           </ul>
         </li>
 </ul>
