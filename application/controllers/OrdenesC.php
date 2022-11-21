@@ -25,8 +25,6 @@ class OrdenesC extends CI_Controller
         $this->load->model('OrdenesM');
         //obtener id de la tabla planta
         $data['plantaId'] = $this->OrdenesM->getPlantaId();
-
-
         //$data['clienteId'] = $this->OrdenesM->clienteId();
         //obtener la razon social de la tabla clientes 
         $data['clientesRazonId'] = $this->OrdenesM->getClienteRazon();
@@ -34,7 +32,7 @@ class OrdenesC extends CI_Controller
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
-        //$this->form_validation->set_rules('nombre', 'nombre', 'required');
+        #$this->form_validation->set_rules('nombre', 'nombre', 'required');
         
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');

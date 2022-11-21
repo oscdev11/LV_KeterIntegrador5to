@@ -2,6 +2,16 @@
 
 class EmpleadosC extends CI_Controller
 {
+    //Prueva
+    public function dinamico(){
+        parent::dinamico();
+        $this->load->model('EmpleadosM');
+    }
+    function index(){
+        $data['countru'] = $this->EmpleadosM->Dependinamico();
+        $this->load->view('dinamico',$data);
+    }
+    //Prueva
     //vista general
     public function show(){
         $this->load->model('EmpleadosM');
@@ -49,6 +59,9 @@ class EmpleadosC extends CI_Controller
             redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
         }
     }
+    
+
+
     //funcion para actualizar la informacion
     public function updateEmpleado($id_Empleado){
         $this->load->model('EmpleadosM');
