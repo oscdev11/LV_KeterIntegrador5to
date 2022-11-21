@@ -5,12 +5,9 @@
         public function show(){
             $this->load->model('PuestosM');
             $data['puestos'] = $this->PuestosM->getPuestos();
-
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
-
             $this->load->view('puestos/listaPuestos.php', $data);
-
             $this->load->view('headers/footer.php');
         }
 
@@ -31,6 +28,14 @@
                     $this->PuestosM->insertPuestos();
                     redirect(base_url('index.php/PuestosC/show'), 'refresh');
                 }
+        }
+        
+        //borrar quimico
+        public function borrarPuesto($id_Puesto){
+            $this->load->model('PuestosM');
+            if($data['puesto'] = $this->PuestosM->deletePuesto($id_Puesto)){
+                redirect(base_url('index.php/PuestosC/show'), 'refresh');
+            }
         }
     }
     

@@ -41,8 +41,9 @@ class ClientesC extends CI_Controller
                 {
                         $this->load->view('headers/head.php');
                         $this->load->view('headers/menu.php');
+                        $this->load->view('clientes/insertCliente');                        
                         $this->load->view('headers/footer.php');
-                        $this->load->view('clientes/insertCliente');
+
                 }
                 else
                 {
@@ -66,8 +67,8 @@ class ClientesC extends CI_Controller
                 {
                         $this->load->view('headers/head.php');
                         $this->load->view('headers/menu.php');
-                        $this->load->view('headers/footer.php');
                         $this->load->view('clientes/updateCliente', $data);
+                        $this->load->view('headers/footer.php');
                 }
                 else
                 {

@@ -39,4 +39,5 @@
 <a class="btn btn-danger" href="<?=base_url('index.php/MaterialesC/show') ?>">Regresar</a>
 
 </div>
-
+</div>
+<br><br>

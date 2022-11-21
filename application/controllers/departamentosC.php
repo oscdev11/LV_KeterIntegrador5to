@@ -45,8 +45,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('departamentos/updateDepartamento', $data);                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('departamentos/updateDepartamento', $data);
+
                 } else{
                     $this->DepartamentosM->updateDepartamento($id_Departamento);
                     redirect(base_url('index.php/DepartamentosC/show'), 'refresh');

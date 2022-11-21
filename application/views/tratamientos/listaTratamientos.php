@@ -15,6 +15,7 @@
             <th align="center" class="w-25 p-3">Acciones</th>
             <th class="w-auto p-3">ID</th>
             <th class="w-auto p-3">Nombre</th>
+            <th class="w-auto p-3">Agregar Químicos</th>
             <th class="w-auto p-3">Químicos</th>
         </thead>
         
@@ -28,9 +29,13 @@
 
                     <td class="w-auto p-3 align-middle"><?=$key->id_Tratamiento ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombreTratamiento ?></td>
-                    <td class="w-auto p-3 align-middle">Aquí irán los químicos</td>
+                    <td class="w-auto p-3 align-middle">
+                    <a class="btn btn-primary" href="<?=base_url('index.php/QuimicoTratamientoC/show/').$key->id_Tratamiento ?>">Agregar Químicos</a>
+                    </td>
+                    <td class="w-auto p-3 align-middle">...</td>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>   
 </div>
+<br><br>
