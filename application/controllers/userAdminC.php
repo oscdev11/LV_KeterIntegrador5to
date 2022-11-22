@@ -9,9 +9,9 @@ class userAdminC extends CI_Controller
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('userAdmin/listaUserAdmin.php', $data);            
             $this->load->view('headers/footer.php');
 
-            $this->load->view('userAdmin/listaUserAdmin.php', $data);
     }
 
     //actualizar información de UserAdmin
@@ -25,8 +25,9 @@ class userAdminC extends CI_Controller
             if($this->form_validation->run() == FALSE){
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
+                $this->load->view('userAdmin/updateUserAdmin', $data);                
                 $this->load->view('headers/footer.php');
-                $this->load->view('userAdmin/updateUserAdmin', $data);
+
             } else{
                 $this->userAdminM->updateUserAdmin($id_UserAdmin);
                 redirect(base_url('index.php/userAdminC/show'), 'refresh');

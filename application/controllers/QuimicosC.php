@@ -5,12 +5,11 @@
         public function show(){
             $this->load->model('QuimicosM');
             $data['quimicos'] = $this->QuimicosM->getQuimicos();
-
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('quimicos/listaQuimicos.php', $data);            
             $this->load->view('headers/footer.php');
 
-            $this->load->view('quimicos/listaQuimicos.php', $data);
         }
 
          // inserción de Quimico
@@ -23,8 +22,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('quimicos/insertQuimico');                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('quimicos/insertQuimico');
+
                 } else{
                     $this->QuimicosM->insertQuimico();
                     redirect(base_url('index.php/QuimicosC/show'), 'refresh');
@@ -42,8 +42,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('quimicos/updateQuimico', $data);                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('quimicos/updateQuimico', $data);
+
                 } else{
                     $this->QuimicosM->updateQuimico($id_Quimico);
                     redirect(base_url('index.php/QuimicosC/show'), 'refresh');

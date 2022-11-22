@@ -8,9 +8,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('colores/listaColores.php', $data);            
             $this->load->view('headers/footer.php');
 
-            $this->load->view('colores/listaColores.php', $data);
         }
 
         //ver Color
@@ -20,8 +20,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
-            $this->load->view('headers/footer.php');
             $this->load->view('colores/detalleColor.php', $data);
+            $this->load->view('headers/footer.php');
+
         }
 
         // inserción de Color
@@ -34,8 +35,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('colores/insertColor');                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('colores/insertColor');
+
                 } else{
                     $this->ColoresM->insertColor();
                     redirect(base_url('index.php/ColoresC/show'), 'refresh');
@@ -53,8 +55,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('colores/updateColor', $data);                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('colores/updateColor', $data);
+
                 } else{
                     $this->ColoresM->updateColor($id_Color);
                     redirect(base_url('index.php/ColoresC/show'), 'refresh');

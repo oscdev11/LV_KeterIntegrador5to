@@ -16,6 +16,7 @@
             <th class="w-auto p-3">ID</th>
             <th class="w-auto p-3">Nombre</th>
             <th class="w-auto p-3">Abreviatura</th>
+            <th class="w-auto p-3">Agregar Químicos</th>
             <th class="w-auto p-3">Químicos</th>
         </thead>
         
@@ -30,9 +31,13 @@
                     <td class="w-auto p-3 align-middle"><?=$key->id_Color ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombreColor ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->abreviaturaColor ?></td>
-                    <!-- <td class="w-auto p-3 align-middle"><?=$key->quimico ?></td> -->
+                    <td class="w-auto p-3 align-middle">
+                    <a class="btn btn-primary" href="<?=base_url('index.php/QuimicoColorC/show/').$key->id_Color ?>">Agregar Químicos</a>
+                    </td>
+                    <td class="w-auto p-3 align-middle">...</td>
                 </tr>
             <?php endforeach ?>
         </tbody>
     </table>   
 </div>
+<br><br>

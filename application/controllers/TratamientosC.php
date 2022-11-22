@@ -9,9 +9,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('tratamientos/listaTratamientos.php', $data);            
             $this->load->view('headers/footer.php');
 
-            $this->load->view('tratamientos/listaTratamientos.php', $data);
         }
 
         // inserción de Tratamiento
@@ -24,8 +24,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('tratamientos/insertTratamiento');                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('tratamientos/insertTratamiento');
+
                 } else{
                     $this->TratamientosM->insertTratamiento();
                     redirect(base_url('index.php/TratamientosC/show'), 'refresh');
@@ -43,8 +44,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('tratamientos/updateTratamiento', $data);                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('tratamientos/updateTratamiento', $data);
+
                 } else{
                     $this->TratamientosM->updateTratamiento($id_Tratamiento);
                     redirect(base_url('index.php/TratamientosC/show'), 'refresh');
@@ -58,8 +60,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('tratamientos/detalleTratamiento.php', $data);            
             $this->load->view('headers/footer.php');
-            $this->load->view('tratamientos/detalleTratamiento.php', $data);
+
         }
 
         //borrar quimico

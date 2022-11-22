@@ -30,3 +30,5 @@
 <a class="btn btn-danger" href="<?=base_url('index.php/ColoresC/show') ?>">Regresar</a>
 
 </div>
+</div>
+<br><br>

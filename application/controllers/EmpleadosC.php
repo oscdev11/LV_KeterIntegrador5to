@@ -45,8 +45,9 @@ class EmpleadosC extends CI_Controller
             if($this->form_validation->run() == FALSE){
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
+                $this->load->view('empleados/insertEmpleado',$data);                
                 $this->load->view('headers/footer.php');
-                $this->load->view('empleados/insertEmpleado',$data);
+
             } else{
                 $this->EmpleadosM->insertEmpleado();
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');

@@ -26,3 +26,4 @@
 <a class="btn btn-danger" href="<?=base_url('index.php/TratamientosC/show') ?>">Regresar</a>
 
 </div>
+<br><br>
