@@ -1,3 +1,4 @@
+<script src="jquery.js"></script>
 <div class="container-fluid">
 <form action="<?=base_url('index.php/EmpleadosC/updateEmpleado').$empleado[0]->id_Empleado ?>" method="POST">
 <br>
