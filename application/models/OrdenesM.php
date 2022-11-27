@@ -39,11 +39,11 @@ function insertOrden(){
         'id_Cliente' => $this->input->post('id_Cliente'),
         'fechaCaptura' => $this->input->post('fechaCaptura'),
         'fechaEntrega' => $this->input->post('fechaEntrega'),
-        'domicilioEnvio' => $this->input->post('fechaEntrega'),
+        'domicilioEnvio' => $this->input->post('domicilioEnvio'),
         'comentarios' => $this->input->post('comentarios'),
         'estado' => $this->input->post('estado'),
         );
-        $this->db->insert('ordenProduccion', $data);
+        $this->db->insert('ordenproduccion', $data);
 }
 /*
 //FUNCION BOTON VER 

@@ -18,7 +18,7 @@
 
                 <select  hidden="hidden" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($plantaId as $key): ?>
-                    <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
+                    <option value="<?=$key->id_Planta ?>"><?=$key->nombre ?></option>
                     <?php endforeach?>
                 </select>
 
@@ -50,7 +50,7 @@
 
 
                <label for="">Estado: </label>
-                <select name="estado" id="" class="form-select shadow p-1 mb-2 bg-body rounded">
+                <select name="estado" class="form-select shadow p-1 mb-2 bg-body rounded">
                     <option value="En espera">En espera</option>
                     <option value="En proceso">En proceso</option>
                     <option value="Terminado">Terminado</option>
