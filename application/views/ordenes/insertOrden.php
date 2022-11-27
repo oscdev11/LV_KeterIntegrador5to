@@ -5,9 +5,7 @@
 </div>
 
 <div class="container">
-    <?php print_r($plantaId) ?>
-    <?php print_r($clientesRazonId) ?>
-    <?php echo validation_errors(); ?>
+   
 
     <form action="<?=base_url('index.php/OrdenesC/insertOrden') ?>" method="POST">
 
@@ -16,9 +14,9 @@
             <div class="col-4">
 
 
-               
+               <input type="hidden" name="prueba" >
 
-                <select  id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
+                <select  hidden="hidden" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($plantaId as $key): ?>
                     <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
                     <?php endforeach?>
@@ -74,3 +72,9 @@
     </form>
 </div>
 <br><br>
+
+
+
+<?php print_r($plantaId) ?>
+    <?php print_r($clientesRazonId) ?>
+    <?php echo validation_errors(); ?>

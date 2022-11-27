@@ -2,8 +2,9 @@
 
     class PuestosM extends CI_Model
     {
-        function getPuestos(){
-            $query = $this->db->get('puesto');
+        function getPuestos($id_Departamento){
+            $sql = "select * from Departamento, Puesto where Departamento.id_Departamento = Puesto.id_Departamento AND Puesto.id_Departamento = $id_Departamento";
+            $query = $this->db->query($sql);
             return $query->result();
         }
 

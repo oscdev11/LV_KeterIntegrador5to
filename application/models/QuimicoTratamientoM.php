@@ -2,8 +2,9 @@
 
     class QuimicoTratamientoM extends CI_Model
     {
-        function getQuimicoTratamientos(){
-            $query = $this->db->get('quimicotratamiento');
+        function getQuimicoTratamientos($id_Tratamiento){
+            $sql = "select * from QuimicoTratamiento, Quimico where QuimicoTratamiento.id_Quimico = Quimico.id_Quimico AND QuimicoTratamiento.id_Tratamiento = $id_Tratamiento";
+            $query = $this->db->query($sql);
             return $query->result();
         }
 

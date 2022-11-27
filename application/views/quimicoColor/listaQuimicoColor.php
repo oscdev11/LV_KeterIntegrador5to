@@ -6,7 +6,7 @@
 <div class="container-fluid">
 
 <br>
-<div class="alert alert-success align-middle" role="alert" align="center"><h5>Lista de Quimicos</h5></div>
+<div class="alert alert-success align-middle" role="alert" align="center"><h5>Lista de Quimicos de Color: </h5></div>
 <br>
 
 </div>

@@ -2,9 +2,9 @@
 
     class QuimicoColorC extends CI_Controller
     {
-        public function show(){
+        public function show($id_Color){
             $this->load->model('QuimicoColorM');
-            $data['quimicos'] = $this->QuimicoColorM->getQuimicoColores();
+            $data['quimicos'] = $this->QuimicoColorM->getQuimicoColores($id_Color);
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
             $this->load->view('quimicoColor/listaQuimicoColor.php', $data);

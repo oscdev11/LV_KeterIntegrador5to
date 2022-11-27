@@ -2,9 +2,9 @@
 
     class QuimicoTratamientoC extends CI_Controller
     {
-        public function show(){
+        public function show($id_Tratamiento){
             $this->load->model('QuimicoTratamientoM');
-            $data['quimicos'] = $this->QuimicoTratamientoM->getQuimicoTratamientos();
+            $data['quimicos'] = $this->QuimicoTratamientoM->getQuimicoTratamientos($id_Tratamiento);
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
             $this->load->view('quimicoTratamiento/listaQuimicoTratamiento.php', $data);

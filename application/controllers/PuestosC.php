@@ -2,9 +2,9 @@
 
     class PuestosC extends CI_Controller
     {
-        public function show(){
+        public function show($id_Departamento){
             $this->load->model('PuestosM');
-            $data['puestos'] = $this->PuestosM->getPuestos();
+            $data['puestos'] = $this->PuestosM->getPuestos($id_Departamento);
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
             $this->load->view('puestos/listaPuestos.php', $data);

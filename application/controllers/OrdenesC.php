@@ -32,7 +32,7 @@ class OrdenesC extends CI_Controller
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         
-        #$this->form_validation->set_rules('nombre', 'nombre', 'required');
+        $this->form_validation->set_rules('id_Planta', 'Planta', 'required');
         
         if ($this->form_validation->run() == FALSE){
             $this->load->view('headers/head.php');
