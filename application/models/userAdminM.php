@@ -5,7 +5,7 @@
         //show listado de UserAdmin
         function getUserAdmins(){
             $query = $this->db->get('UserAdmin');
-            return $query->result();
+            return $query->result(); 
         }
 
         // obtener detalles del usuario administrador
