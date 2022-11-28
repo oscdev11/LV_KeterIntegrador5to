@@ -14,7 +14,7 @@
         //inserción de puesto
         public function insertPuesto(){
             $this->load->model('PuestosM');
-            $data['puestos'] = $this->PuestosM->getPuestos();
+            $data['puestos'] = $this->PuestosM->getPuestoss();
             $this->load->helper(array('form', 'url'));
                 $this->load->library('form_validation');
                 $this->form_validation->set_rules('nombre', 'nombre', 'required');
