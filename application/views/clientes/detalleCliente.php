@@ -61,8 +61,8 @@
 </div>
 
 <a class="btn btn-danger" href="<?=base_url('index.php/ClientesC/show') ?>">Regresar</a>
-
 </div>
+</div><br><br>
 
 
 

@@ -2,6 +2,16 @@
 
 class EmpleadosC extends CI_Controller
 {
+    //Prueva
+    public function dinamico(){
+        parent::dinamico();
+        $this->load->model('EmpleadosM');
+    }
+    function index(){
+        $data['countru'] = $this->EmpleadosM->Dependinamico();
+        $this->load->view('dinamico',$data);
+    }
+    //Prueva
     //vista general
     public function show(){
         $this->load->model('EmpleadosM');
@@ -35,8 +45,9 @@ class EmpleadosC extends CI_Controller
             if($this->form_validation->run() == FALSE){
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
+                $this->load->view('empleados/insertEmpleado',$data);                
                 $this->load->view('headers/footer.php');
-                $this->load->view('empleados/insertEmpleado',$data);
+
             } else{
                 $this->EmpleadosM->insertEmpleado();
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
@@ -49,10 +60,13 @@ class EmpleadosC extends CI_Controller
             redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
         }
     }
+    
+
+
     //funcion para actualizar la informacion
     public function updateEmpleado($id_Empleado){
         $this->load->model('EmpleadosM');
-        $data1['puestos'] = $this->EmpleadosM->getPuestos();
+        $data['puestos'] = $this->EmpleadosM->getPuestos();
         $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
         $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
@@ -62,7 +76,7 @@ class EmpleadosC extends CI_Controller
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
                 $this->load->view('headers/footer.php');
-                $this->load->view('empleados/updateEmpleado', $data,$data1);
+                $this->load->view('empleados/updateEmpleado', $data,$data);
             } else{
                 $this->EmpleadosM->updateEmpleado($id_Empleado);
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');

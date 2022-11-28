@@ -12,7 +12,7 @@
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
-            <th align="center" class="w-25 p-3">Acciones</th>
+            <th align="center" class="">Acciones</th>
             <th class="w-auto p-3">Pedido</th>
 
             <th class="w-auto p-3">Cliente </th>
@@ -52,3 +52,4 @@
         </tbody>
     </table>   
 </div>
+<br><br>

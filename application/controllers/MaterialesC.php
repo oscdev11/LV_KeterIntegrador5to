@@ -9,9 +9,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('materiales/listaMateriales.php', $data);            
             $this->load->view('headers/footer.php');
 
-            $this->load->view('materiales/listaMateriales.php', $data);
         }
 
         //ver Material
@@ -21,8 +21,9 @@
 
             $this->load->view('headers/head.php');
             $this->load->view('headers/menu.php');
+            $this->load->view('materiales/detalleMaterial.php', $data);            
             $this->load->view('headers/footer.php');
-            $this->load->view('materiales/detalleMaterial.php', $data);
+
         }
 
         // inserción de Material
@@ -35,8 +36,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('materiales/insertMaterial');                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('materiales/insertMaterial');
+
                 } else{
                     $this->MaterialesM->insertMaterial();
                     redirect(base_url('index.php/MaterialesC/show'), 'refresh');
@@ -54,8 +56,9 @@
                 if($this->form_validation->run() == FALSE){
                     $this->load->view('headers/head.php');
                     $this->load->view('headers/menu.php');
+                    $this->load->view('materiales/updateMaterial', $data);                    
                     $this->load->view('headers/footer.php');
-                    $this->load->view('materiales/updateMaterial', $data);
+
                 } else{
                     $this->MaterialesM->updateMaterial($id_Material);
                     redirect(base_url('index.php/MaterialesC/show'), 'refresh');

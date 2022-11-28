@@ -5,22 +5,20 @@
 </div>
 
 <div class="container">
-    <?php print_r($plantaId) ?>
-    <?php print_r($clientesRazonId) ?>
-    <?php echo validation_errors(); ?>
+   
 
-    <form action="<?=base_url('index.php/OrdendesC/insertOrden') ?>" method="POST">
+    <form action="<?=base_url('index.php/OrdenesC/insertOrden') ?>" method="POST">
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
 
 
-               
+               <input type="hidden" name="prueba" >
 
-                <select  id="" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
+                <select  hidden="hidden" name="id_Planta" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($plantaId as $key): ?>
-                    <option value="<?=$key->id_Planta ?>"><?=$key->id_Planta ?></option>
+                    <option value="<?=$key->id_Planta ?>"><?=$key->nombre ?></option>
                     <?php endforeach?>
                 </select>
 
@@ -52,7 +50,7 @@
 
 
                <label for="">Estado: </label>
-                <select name="estado" id="" class="form-select shadow p-1 mb-2 bg-body rounded">
+                <select name="estado" class="form-select shadow p-1 mb-2 bg-body rounded">
                     <option value="En espera">En espera</option>
                     <option value="En proceso">En proceso</option>
                     <option value="Terminado">Terminado</option>
@@ -65,7 +63,7 @@
 <br><br>
 
     <div class="container" align="center">
-        <a class="btn btn-danger" href="<?=base_url('index.php/TratamientosC/show') ?>">Cancelar</a>
+        <a class="btn btn-danger" href="<?=base_url('index.php/OrdenesC/show') ?>">Cancelar</a>
         <input class="btn btn-secondary" type="reset">
         <input class="btn btn-success" type="submit">
         
@@ -73,3 +71,10 @@
     
     </form>
 </div>
+<br><br>
+
+
+
+<?php print_r($plantaId) ?>
+    <?php print_r($clientesRazonId) ?>
+    <?php echo validation_errors(); ?>

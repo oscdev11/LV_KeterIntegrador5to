@@ -82,3 +82,5 @@
 <a class="btn btn-danger" href="<?=base_url('index.php/EmpleadosC/show') ?>">Regresar</a>
 
 </div>
+</div>
+<br><br>
