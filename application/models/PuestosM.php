@@ -8,6 +8,12 @@
             return $query->result();
         }
 
+        //show lista Puestos
+        function getPuestoss(){
+            $query = $this->db->get('puesto');
+            return $query->result();
+        }
+
         function getPuesto($id_Puesto){
             $this->db->where('id_Puesto', $id_Puesto);
             $query = $this->db->get('puesto');
