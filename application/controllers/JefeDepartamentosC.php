@@ -5,7 +5,6 @@ class JefeDepartamentosC extends CI_Controller
     public function show(){
         $this->load->model('JefeDepartamentosM');
         $data['jefes'] = $this->JefeDepartamentosM->getJefes();
-
         $this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
         $this->load->view('jefesDepartamento/listaJefesDepartamentos.php', $data);
