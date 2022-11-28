@@ -29,11 +29,11 @@
             <?php foreach ($quimicos as $key): ?> 
                 <tr class="w-25 p-3">
                     <td align="center" class="w-auto p-3 align-middle"> <!-- <a class="btn btn-warning" href="<?=base_url('index.php/DepartamentosC/detalleDepartamento/').$key->id_Departamento ?>">Ver</a> -->
-                     <!-- <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/updateDepartamento/').$key->id_Quimico ?>">Editar</a>  -->
-                     <a class="btn btn-danger" href="<?=base_url('index.php/QuimicoTratamientoC/borrarQuimicoTratamiento/').$key->id_Quimico ?>">Eliminar</a>
+                     <!-- <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/updateDepartamento/').$key->Nombre_Quimico ?>">Editar</a>  -->
+                     <a class="btn btn-danger" href="<?=base_url('index.php/QuimicoTratamientoC/borrarQuimicoTratamiento/').$key->Nombre_Quimico ?>">Eliminar</a>
                 </td>
 
-                    <td class="w-auto p-3 align-middle"><?=$key->id_Quimico ?></td>
+                    <td class="w-auto p-3 align-middle"><?=$key->Nombre_Quimico ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->cantidadUsar ?> ml.</td>
                 </tr>
             <?php endforeach ?>

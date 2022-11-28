@@ -8,7 +8,11 @@
         }*/
 
         function getQuimicoColores($id_Color){
-            $sql = "select * from QuimicoColor, Quimico where QuimicoColor.id_Quimico = Quimico.id_Quimico AND QuimicoColor.id_Color = $id_Color";
+            $sql = "select c.nombre as Nombre_Quimico, cantidadUsar from quimicocolor
+            inner join color b using(id_Color)
+            inner join quimico c using(id_Quimico) where b.id_Color = $id_Color";
+            // $sql = "select * from QuimicoColor, Quimico where QuimicoColor.id_Quimico = Quimico.id_Quimico AND QuimicoColor.id_Color = $id_Color";
+
             $query = $this->db->query($sql);
             return $query->result();
         }
