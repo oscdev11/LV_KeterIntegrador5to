@@ -12,7 +12,7 @@
             <th class="w-auto p-3">Id</th>
             <th class="w-auto p-3">Nombre del empleado</th>
             <th class="w-auto p-3">Departamento</th>
-            <th class="w-auto p-3">Contraseña </th>
+            <th class="w-auto p-3">Contraseña </th> 
         </thead>
         <?php foreach ($empleados as $key): ?>
                 <tr class="w-25 p-3">
