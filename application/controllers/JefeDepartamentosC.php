@@ -3,15 +3,13 @@
 class JefeDepartamentosC extends CI_Controller
 {
     public function show(){
-         print "holaaa";
-
-       /* $this->load->model('ClientesM');
-        $data['clientes'] = $this->ClientesM->getClientes();
+        $this->load->model('JefeDepartamentosM');
+        $data['jefes'] = $this->JefeDepartamentosM->getJefes();
 
         $this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
-        $this->load->view('clientes/listaClientes.php', $data);
-        $this->load->view('headers/footer.php');   */
+        $this->load->view('jefesDepartamento/listaJefesDepartamentos.php', $data);
+        $this->load->view('headers/footer.php');   
     }
 /*
     public function detalleCliente($id_Cliente){
