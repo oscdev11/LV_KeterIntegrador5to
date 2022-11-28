@@ -2,7 +2,8 @@
 class JefeDepartamentosM extends CI_Model
 {
     function getJefes(){
-        $query = $this->db->get('jefedepartamento');
+        $sql = "";
+        $query = $this->db->get($sql);
         return $query->result();
     }
 
