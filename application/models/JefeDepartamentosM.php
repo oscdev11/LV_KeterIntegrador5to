@@ -2,8 +2,10 @@
 class JefeDepartamentosM extends CI_Model
 {
     function getJefes(){
-        $sql = "";
-        $query = $this->db->get($sql);
+        $sql = "select b.nombre as NombreEmpleado,c.nombre as NombrePuesto, a.nombreUsuario, a.contra from jefedepartamento a 
+        inner join empleado b using(id_Empleado)
+        inner join puesto c using(id_Puesto)";
+        $query = $this->db->query($sql);
         return $query->result();
     }
 

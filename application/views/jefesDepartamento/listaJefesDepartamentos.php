@@ -16,12 +16,12 @@
         </thead>
         <?php foreach ($jefes as $key): ?>
                 <tr class="w-25 p-3">
-                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/EmpleadosC/detalleEmpleado/').$key->id_Empleado ?>">Ver</a> 
-                     <a class="btn btn-primary" href="<?=base_url('index.php/EmpleadosC/updateEmpleado/').$key->id_Empleado ?>">Editar</a> 
-                     <a class="btn btn-danger" href="<?=base_url('index.php/EmpleadosC/borrarEmpleado/').$key->id_Empleado ?>">Eliminar</a>
+                    <td align="center" class="w-auto p-3 align-middle"> <a class="btn btn-warning" href="<?=base_url('index.php/EmpleadosC/detalleEmpleado/').$key->NombreEmpleado ?>">Ver</a> 
+                     <a class="btn btn-primary" href="<?=base_url('index.php/EmpleadosC/updateEmpleado/').$key->NombreEmpleado ?>">Editar</a> 
+                     <a class="btn btn-danger" href="<?=base_url('index.php/EmpleadosC/borrarEmpleado/').$key->NombreEmpleado ?>">Eliminar</a>
                 </td>
-                    <td class="w-auto p-3 align-middle"><?=$key->id_JefeDepartamento ?></td>
-                    <td class="w-auto p-3 align-middle"><?=$key->contra ?></td>
+                    <td class="w-auto p-3 align-middle"><?=$key->NombreEmpleado ?></td>
+                    <td class="w-auto p-3 align-middle"><?=$key->NombrePuesto ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->nombreUsuario ?></td>
                     <td class="w-auto p-3 align-middle"><?=$key->contra ?></td>
                 </tr>
