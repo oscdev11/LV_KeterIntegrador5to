@@ -23,10 +23,7 @@ class OrdenesC extends CI_Controller
     //FUNCION BOTON INSERTAR
     public function insertOrden(){
         $this->load->model('OrdenesM');
-        //obtener id de la tabla planta
         $data['plantaId'] = $this->OrdenesM->getPlantaId();
-        //$data['clienteId'] = $this->OrdenesM->clienteId();
-        //obtener la razon social de la tabla clientes 
         $data['clientesRazonId'] = $this->OrdenesM->getClienteRazon();
         
         $this->load->helper(array('form', 'url'));
