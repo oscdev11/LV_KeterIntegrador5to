@@ -14,6 +14,12 @@
             return $query->result();
         }
 
+        //get departamentosss
+        function getDepartamentos(){
+            $query = $this->db->get('departamento');
+            return $query->result();
+        }
+
         function getPuesto($id_Puesto){
             $this->db->where('id_Puesto', $id_Puesto);
             $query = $this->db->get('puesto');
@@ -22,9 +28,10 @@
 
         function insertPuesto(){
             $data = array(
+                'id_Departamento' => $this->input->post('id_Departamento'),
                 'nombre' => $this->input->post('nombre')
             );
-            $this->db->insert('departamento', $data);
+            $this->db->insert('puesto', $data);
         }
 
         //borrar registro de Material

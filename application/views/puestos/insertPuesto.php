@@ -17,6 +17,19 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
+
+                <!-- <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    
+                    <option value="<?=$key->id_Departamento ?>"> <?=$key->nombre ?></option>
+                    
+                </select> -->
+
+                <select id="" name="id_Departamento" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($departamentos as $key): ?>
+                    <option value="<?=$key->id_Departamento ?>"> <?=$key->nombre ?></option>
+                    <?php endforeach?>
+                </select>
+
                 <label for="">Nombre del puesto: </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="nombre">
             </div> 
@@ -25,7 +38,7 @@
 <br><br>
 
     <div class="container" align="center">
-        <a class="btn btn-danger" href="<?=base_url('index.php/PuestosC/show') ?>">Cancelar</a>
+        <!-- <a class="btn btn-danger" href="<?=base_url('index.php/PuestosC/show').$key->id_Departamento ?>">Cancelar</a> -->
         <input class="btn btn-secondary" type="reset">
         <input class="btn btn-success" type="submit">
         

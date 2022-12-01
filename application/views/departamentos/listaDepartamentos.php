@@ -32,7 +32,9 @@
                     <td class="w-auto p-3 align-middle">
                     <a class="btn btn-primary" href="<?=base_url('index.php/PuestosC/show/').$key->id_Departamento ?>">Agregar Puestos</a> 
                     </td>
-                    <td class="w-auto p-3 align-middle">Aquí van los puestos</td>
+                    <td class="w-auto p-3 align-middle">
+                    ...
+                    </td>
                 </tr>
             <?php endforeach ?>
         </tbody>
