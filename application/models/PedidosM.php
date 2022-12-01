@@ -9,10 +9,10 @@
         }
 
         // show lista Puestos
-         function getOrdenes(){
-             $query = $this->db->get('ordenproduccion');
-             return $query->result();
-         }
+        function getOrdenes(){
+            $query = $this->db->get('ordenproduccion');
+            return $query->result();
+        }
 
         // get departamentosss
          function getColores(){

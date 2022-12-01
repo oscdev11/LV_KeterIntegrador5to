@@ -13,9 +13,9 @@
 
         // inserción de puesto
          public function insertPedido(){
-            $this->load->model('PuestosM');
-            $data['ordenes'] = $this->OrdenesM->getOrdenes();
-            $data['colores'] = $this->ColoresM->getColores();
+            $this->load->model('PedidosM');
+            $data['ordenes'] = $this->PedidosM->getOrdenes();
+            $data['colores'] = $this->PedidosM->getColores();
 
                  $this->load->helper(array('form', 'url'));
                  $this->load->library('form_validation');

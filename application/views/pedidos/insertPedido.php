@@ -21,7 +21,7 @@
                 <label for="">Orden de producción: </label>
                 <select id="" name="id_OrdenProduccion" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($ordenes as $key): ?>
-                    <option value="<?=$key->id_OrdenProduccion ?>"> <?=$key->nombre ?></option>
+                    <option value="<?=$key->id_OrdenProduccion ?>"> <?=$key->id_OrdenProduccion ?></option>
                     <?php endforeach?>
                 </select>
 
@@ -36,7 +36,7 @@
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="cantidad">
 
                 <label for="">Precio Unitario: </label>
-                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="precioUnitario">
+                <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="PrecioUnitario">
 
                 <label for="">Descripción:</label>
                 <textarea class="form-control shadow p-1 mb-2 bg-body rounded" name="descripcion" id="" cols="1" rows="1"></textarea>
