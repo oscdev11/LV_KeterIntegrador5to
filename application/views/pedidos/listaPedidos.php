@@ -36,7 +36,7 @@
                 <tr class="w-25 p-3">
                     <td align="center" class="w-auto p-3 align-middle"> <!-- <a class="btn btn-warning" href="<?=base_url('index.php/DepartamentosC/detalleDepartamento/').$key->id_Departamento ?>">Ver</a> -->
                      <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/updateDepartamento/').$key->id_Pedido ?>">Editar</a> 
-                     <a class="btn btn-danger" href="<?=base_url('index.php/PuestosC/borrarPuesto/').$key->id_Pedido ?>">Eliminar</a>
+                     <a class="btn btn-danger" href="<?=base_url('index.php/PedidosC/borrarPedido/').$key->id_Pedido ?>">Eliminar</a>
                     </td>
 
                     <td class="w-auto p-3 align-middle"><?=$key->id_Pedido ?></td>

@@ -32,13 +32,13 @@
                  }
          }
         
-        // //borrar puesto 
-        // public function borrarPuesto($id_Puesto){
-        //     $this->load->model('PuestosM');
-        //     if($data['puestos'] = $this->PuestosM->deletePuesto($id_Puesto)){
-        //         redirect(base_url('index.php/DepartamentosC/show'), 'refresh');
-        //     }
-        // }
+        // borrar puesto 
+         public function borrarPedido($id_Pedido){
+             $this->load->model('PedidosM');
+             if($data['pedidos'] = $this->PedidosM->deletePedido($id_Pedido)){
+                 redirect(base_url('index.php/OrdenesC/show'), 'refresh');
+             }
+         }
     }
     
 ?>

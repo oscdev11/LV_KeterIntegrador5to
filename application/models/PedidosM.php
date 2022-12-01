@@ -37,12 +37,12 @@
              $this->db->insert('pedido', $data);
          }
 
-        // //borrar registro de Material
-        // function deletePuesto($id_Puesto){
-        //     $this->db->where('id_Puesto', $id_Puesto);
-        //     $this->db->delete('puesto');
-        //     return TRUE;
-        // }
+        // borrar registro de Material
+         function deletePedido($id_Pedido){
+             $this->db->where('id_Pedido', $id_Pedido);
+             $this->db->delete('pedido');
+             return TRUE;
+         }
     }
     
 ?>
