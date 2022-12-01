@@ -75,6 +75,4 @@
 
 
 
-<?php print_r($plantaId) ?>
-    <?php print_r($clientesRazonId) ?>
-    <?php echo validation_errors(); ?>
+                    
