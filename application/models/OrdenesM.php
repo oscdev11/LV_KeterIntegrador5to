@@ -3,9 +3,13 @@ class OrdenesM extends CI_Model
 {
     //funcion ver pantalla principal
     function getOrdenes(){
-        $query = $this->db->get('ordenproduccion');
+        $sql ="select a.id_Planta,a.id_OrdenProduccion, b.razonSocial, a.domicilioEnvio, a.fechaCaptura, a.fechaEntrega , a.estado  from OrdenProduccion a 
+        inner join Cliente b using(id_Cliente )";
+        $query = $this->db->query($sql);
         return $query->result();
     }
+
+ 
 ////////////////////////////////////////////////////////////
 function getPlantaId(){
     $query = $this->db->get('planta');

@@ -14,6 +14,8 @@
             return $query->result();
         }
 
+        
+
         // get departamentosss
          function getColores(){
              $query = $this->db->get('color');
