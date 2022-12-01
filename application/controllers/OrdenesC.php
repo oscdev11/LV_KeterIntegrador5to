@@ -44,6 +44,42 @@ class OrdenesC extends CI_Controller
     }
 
 
+   // /FUNCION BOTON ACTUALIZAR
+    public function updateOrden($id_OrdenProduccion){
+        $this->load->model('OrdenesM');
+
+        $data['ordenesUpdate'] = $this->OrdenesM->getCliente($id_OrdenProduccion);
+
+        $this->load->helper(array('form', 'url'));
+
+                $this->load->library('form_validation');
+               // $this->form_validation->set_rules('alias', 'alias', 'required');
+
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('headers/head.php');
+                        $this->load->view('headers/menu.php');
+                        $this->load->view('headers/footer.php');
+                        $this->load->view('ordenes/updateOrdenes', $data);
+                }
+                else
+                {
+                        $this->OrdenesM->updateCliente($id_OrdenProduccion);
+                        redirect(base_url('index.php/ClientesC/show'), 'refresh');
+                }
+    }
+//funcion boton ver 
+    public function detalleOrden($id_OrdenProduccion){
+        $this->load->model('OrdenesM');
+        $data['odendesVer'] = $this->OrdenesM->getOrden($id_OrdenProduccion);
+
+        $this->load->view('headers/head.php');
+        $this->load->view('headers/menu.php');
+        $this->load->view('ordenes/detalleOrden.php', $data);
+        $this->load->view('headers/footer.php');
+    }
+
 
 
     
@@ -60,31 +96,7 @@ class OrdenesC extends CI_Controller
     }
 
 
-//FUNCION BOTON ACTUALIZAR
-    public function updateCliente($id_Cliente){
-        $this->load->model('ClientesM');
-
-        $data['cliente'] = $this->ClientesM->getCliente($id_Cliente);
-
-        $this->load->helper(array('form', 'url'));
-
-                $this->load->library('form_validation');
-                $this->form_validation->set_rules('alias', 'alias', 'required');
-
-
-                if ($this->form_validation->run() == FALSE)
-                {
-                        $this->load->view('headers/head.php');
-                        $this->load->view('headers/menu.php');
-                        $this->load->view('headers/footer.php');
-                        $this->load->view('clientes/updateCliente', $data);
-                }
-                else
-                {
-                        $this->ClientesM->updateCliente($id_Cliente);
-                        redirect(base_url('index.php/ClientesC/show'), 'refresh');
-                }
-    }
+/
     */
 }
 ?>
