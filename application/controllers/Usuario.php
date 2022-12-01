@@ -11,11 +11,11 @@ public function login(){
         
         if ($this->UsuarioM->validaUsuario($_POST['nombreUsuario'],$_POST['contra'])){
 
-            redirect(base_url('index.php/ClientesC/show'),'refresh'); 
+            redirect(base_url('index.php/JefeDepartamentosC/show'),'refresh'); 
 
         }else if ($this->UsuarioM->validaUsuarioE($_POST['nombreUsuario'],$_POST['contra'])) {
 
-            redirect(base_url('index.php/EmpleadosC/show'),'refresh'); 
+            redirect(base_url('index.php/PlantaC/show'),'refresh'); 
 
         }else{
            

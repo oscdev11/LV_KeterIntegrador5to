@@ -60,7 +60,7 @@
           <ul class="dropdown-menu">
             <li></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/PlantaC/show') ?>">Cerrar sesión</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/Usuario/login') ?>">Cerrar sesión</a></li>
           </ul>
         </li>
 </ul>
