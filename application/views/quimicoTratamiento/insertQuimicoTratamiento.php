@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <br>
-    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Químico al Color:  </h5></div>
+    <div class="alert alert-success align-middle" role="alert" align="center"><h5>Agregar Nuevo Químico al Tratamiento:  </h5></div>
     <br>
 </div>
 
@@ -11,16 +11,16 @@
 
     <?php echo validation_errors(); ?>
 
-    <form action="<?=base_url('index.php/QuimicoColorC/insertQuimicoColor') ?>" method="POST">
+    <form action="<?=base_url('index.php/QuimicoTratamientoC/insertQuimicoTratmiento') ?>" method="POST">
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
 
-                <label for="">Color: </label>
-                <select id="" name="id_Color" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    <?php foreach ($colores as $key): ?>
-                    <option value="<?=$key->id_Color ?>"> <?=$key->nombreColor ?></option>
+                <label for="">Tratamiento: </label>
+                <select id="" name="id_Tratamiento" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <?php foreach ($tratamientos as $key): ?>
+                    <option value="<?=$key->id_Tratamiento ?>"> <?=$key->nombreTratamiento ?></option>
                     <?php endforeach?>
                 </select>
 
