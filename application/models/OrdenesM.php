@@ -43,7 +43,7 @@ function insertOrden(){
         'comentarios' => $this->input->post('comentarios'),
         'estado' => $this->input->post('estado'),
         );
-        $this->db->insert('ordenproduccion', $data);
+        $this->db->insert('ordenproduccion', $data);  
 }
 
 
