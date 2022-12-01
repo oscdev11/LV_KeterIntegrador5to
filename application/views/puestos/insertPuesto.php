@@ -18,12 +18,7 @@
         <div class="row justify-content-center">
             <div class="col-4">
 
-                <!-- <select id="" name="id_Puesto" class="form-control shadow p-1 mb-3 bg-body rounded">
-                    
-                    <option value="<?=$key->id_Departamento ?>"> <?=$key->nombre ?></option>
-                    
-                </select> -->
-
+                <label for="">Departamento: </label>
                 <select id="" name="id_Departamento" class="form-control shadow p-1 mb-3 bg-body rounded">
                     <?php foreach ($departamentos as $key): ?>
                     <option value="<?=$key->id_Departamento ?>"> <?=$key->nombre ?></option>

@@ -23,11 +23,23 @@
             return $query->result();
         }
 
-        function insertPuesto(){
+        function getColores(){
+            $query = $this->db->get('color');
+            return $query->result();
+        }
+
+        function getQuimicos(){
+            $query = $this->db->get('quimico');
+            return $query->result();
+        }
+
+        function insertQuimicoColor(){
             $data = array(
-                'nombre' => $this->input->post('nombre')
+                'id_Quimico' => $this->input->post('id_Quimico'),
+                'id_Color' => $this->input->post('id_Color'),
+                'cantidadUsar' => $this->input->post('cantidadUsar')
             );
-            $this->db->insert('departamento', $data);
+            $this->db->insert('quimicoColor', $data);
         }
 
         //borrar registro de Material
