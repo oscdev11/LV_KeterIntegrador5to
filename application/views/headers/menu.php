@@ -17,7 +17,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?=base_url('index.php/OrdenesC/show') ?>">Órdenes</a>
+          <!-- <a class="nav-link" href="<?=base_url('index.php/OrdenesC/show') ?>">Órdenes</a> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=base_url('index.php/ClientesC/show') ?>">Clientes</a>
@@ -47,7 +47,7 @@
             <li><a class="dropdown-item" href="<?=base_url('index.php/EmpleadosC/show') ?>">Administrar Empleado</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/DepartamentosC/show') ?>">Administrar Departamentos</a></li>
-            <!-- <li><a class="dropdown-item" href="<?=base_url('index.php/PuestosC/show') ?>">Administrar Puestos</a></li> -->
+            <li><a class="dropdown-item" href="<?=base_url('index.php/PuestosC/show') ?>">Administrar Puestos</a></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Jefes de Departamento</a></li>
           </ul>
         </li>

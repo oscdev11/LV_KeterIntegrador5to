@@ -5,50 +5,44 @@ class JefeDepartamentosC extends CI_Controller
     public function show(){
         $this->load->model('JefeDepartamentosM');
         $data['jefes'] = $this->JefeDepartamentosM->getJefes();
-
         $this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
         $this->load->view('jefesDepartamento/listaJefesDepartamentos.php', $data);
         $this->load->view('headers/footer.php');   
     }
-/*
-    public function detalleCliente($id_Cliente){
-        $this->load->model('ClientesM');
-        $data['cliente'] = $this->ClientesM->getCliente($id_Cliente);
 
-        $this->load->view('headers/head.php');
-        $this->load->view('headers/menu.php');
-        $this->load->view('clientes/detalleCliente.php', $data);
-        $this->load->view('headers/footer.php');
-    }
 
-    public function borrarCliente($id_Cliente){
-        $this->load->model('ClientesM');
-        if($data['cliente'] = $this->ClientesM->deleteCliente($id_Cliente)){
-            redirect(base_url('index.php/ClientesC/show'), 'refresh');
-        }
-    }
+    
 
-    public function insertCliente(){
-        $this->load->model('ClientesM');
+    public function inserJefeDepartamento(){
+        $this->load->model('JefeDepartamentosM');
+        $data['Empleado'] = $this->JefeDepartamentosM->getEmpleado();
         $this->load->helper(array('form', 'url'));
 
                 $this->load->library('form_validation');
-                $this->form_validation->set_rules('alias', 'alias', 'required');
+                $this->form_validation->set_rules('id_Empleado', 'required');
 
 
                 if ($this->form_validation->run() == FALSE)
                 {
                         $this->load->view('headers/head.php');
                         $this->load->view('headers/menu.php');
+                        $this->load->view('jefesDepartamento/inserJefeDepartamento',$data);
                         $this->load->view('headers/footer.php');
-                        $this->load->view('clientes/insertCliente');
+                        
                 }
                 else
                 {
-                        $this->ClientesM->insertCliente();
-                        redirect(base_url('index.php/ClientesC/show'), 'refresh');
+                        $this->JefeDepartamentosM->inserJefeDepartamento();
+                        redirect(base_url('index.php/JefeDepartamentosC/show'), 'refresh');
                 }
+    }
+    /*
+    public function borrarCliente($id_Cliente){
+        $this->load->model('ClientesM');
+        if($data['cliente'] = $this->ClientesM->deleteCliente($id_Cliente)){
+            redirect(base_url('index.php/ClientesC/show'), 'refresh');
+        }
     }
 
     public function updateCliente($id_Cliente){

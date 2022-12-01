@@ -70,13 +70,14 @@ class EmpleadosC extends CI_Controller
         $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
         $this->load->helper(array('form', 'url'));
             $this->load->library('form_validation');
-            $this->form_validation->set_rules('numTrabajador', 'nombre', 'required');
+            $this->form_validation->set_rules('numTrabajador', 'required');
 
             if($this->form_validation->run() == FALSE){
                 $this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
+                $this->load->view('empleados/updateEmpleado', $data);
                 $this->load->view('headers/footer.php');
-                $this->load->view('empleados/updateEmpleado', $data,$data);
+                
             } else{
                 $this->EmpleadosM->updateEmpleado($id_Empleado);
                 redirect(base_url('index.php/EmpleadosC/show'), 'refresh');
