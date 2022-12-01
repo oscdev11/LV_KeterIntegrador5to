@@ -23,11 +23,23 @@
             return $query->result();
         }
 
-        function insertPuesto(){
+        function getTratamientos(){
+            $query = $this->db->get('tratamiento');
+            return $query->result();
+        }
+
+        function getQuimicos(){
+            $query = $this->db->get('quimico');
+            return $query->result();
+        }
+
+        function insertQuimicoTratamiento(){
             $data = array(
-                'nombre' => $this->input->post('nombre')
+                'id_Quimico' => $this->input->post('id_Quimico'),
+                'id_Tratamiento' => $this->input->post('id_Tratamiento'),
+                'cantidadUsar' => $this->input->post('cantidadUsar')
             );
-            $this->db->insert('departamento', $data);
+            $this->db->insert('quimicoTratamiento', $data);
         }
 
         //borrar registro de Material

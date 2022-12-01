@@ -16,7 +16,7 @@
 <div class="container" style="width: 80%; height: 50%">
 
     <a class="btn btn-danger" href="<?=base_url('index.php/TratamientosC/show') ?>">Regresar</a>
-    <a class="btn btn-success" href="<?=base_url('index.php/PuestosC/insertPuesto') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Químico</a> <br><br><br>
+    <a class="btn btn-success" href="<?=base_url('index.php/QuimicoTratamientoC/insertQuimicoTratamiento') ?>"><i class="fa-solid fa-plus"></i> Agregar Nuevo Químico</a> <br><br><br>
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
