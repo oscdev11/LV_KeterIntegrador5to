@@ -35,7 +35,7 @@
                     </td>
                     
                     <td>
-                            <a class="btn btn-warning btn-sm" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_OrdenProduccion ?>">Administrar pedido</a> 
+                            <a class="btn btn-warning btn-sm" href="<?=base_url('index.php/PedidosC/show/').$key->id_OrdenProduccion ?>">Administrar pedido</a> 
                             <td class="w-auto p-3 align-middle"><?=$key->id_Cliente ?></td>
                             <td class="w-auto p-3 align-middle"><?=$key->domicilioEnvio ?></td>
                             <td class="w-auto p-3 align-middle"><?=$key->fechaCaptura ?></td>
