@@ -48,7 +48,7 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/DepartamentosC/show') ?>">Administrar Departamentos</a></li>
             <li><a class="dropdown-item" href="<?=base_url('index.php/PuestosC/show') ?>">Administrar Puestos</a></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/') ?>">Administrar Jefes de Departamento</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('index.php/JefeDepartamentosC/show') ?>">Administrar Jefes de Departamento</a></li>
           </ul>
         </li>
       </ul>
