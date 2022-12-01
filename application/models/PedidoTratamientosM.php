@@ -1,9 +1,9 @@
 <?php
 
-    class PedidoMaterialesM extends CI_Model
+    class PedidoTratamientosM extends CI_Model
     {
-        function getPedidoMateriales($id_Pedido){
-            $sql = "select * from Pedido, MaterialPedido where Pedido.id_Pedido = MaterialPedido.id_Pedido AND MaterialPedido.id_Pedido = $id_Pedido";
+        function getPedidoTratamientos($id_Pedido){
+            $sql = "select * from Pedido, TratamientoPedido where Pedido.id_Pedido = TratamientoPedido.id_Pedido AND TratamientoPedido.id_Pedido = $id_Pedido";
             $query = $this->db->query($sql);
             return $query->result();
         }
@@ -15,8 +15,8 @@
          }
 
         // // get departamentosss
-          function getMateriales(){
-              $query = $this->db->get('material');
+          function getTratamientos(){
+              $query = $this->db->get('tratamiento');
               return $query->result();
          }
 
@@ -29,16 +29,16 @@
           function insertPedidoMaterial(){
               $data = array(
                   'id_Pedido' => $this->input->post('id_Pedido'),
-                  'id_Material' => $this->input->post('id_Material'),
-                  'porcentaje' => $this->input->post('porcentaje')
+                  'id_Tratamiento' => $this->input->post('id_Tratamiento'),
+                  'tiempoEnTratamiento' => $this->input->post('tiempoEnTratamiento')
               );
-              $this->db->insert('materialpedido', $data);
+              $this->db->insert('tratamientopedido', $data);
           }
 
         // // borrar registro de Material
-          function deletePedidoMaterial($id_Pedido){
-              $this->db->where('id_Pedido', $id_Pedido);
-              $this->db->delete('materialpedido');
+          function deletePedidoTratamiento($id_Tratamiento){
+              $this->db->where('id_Tratamiento', $id_Tratamiento);
+              $this->db->delete('tratamientopedido');
               return TRUE;
           }
     }

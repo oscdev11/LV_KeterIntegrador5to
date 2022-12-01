@@ -45,10 +45,10 @@
                     <td class="w-auto p-3 align-middle">$<?=$key->PrecioUnitario ?> MXN.</td>
                     <td class="w-auto p-3 align-middle"><?=$key->descripcion ?></td>
                     <td>
-                        <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/updateDepartamento/').$key->id_Pedido ?>">Material</a>
+                        <a class="btn btn-primary" href="<?=base_url('index.php/PedidoMaterialesC/show/').$key->id_Pedido ?>">Material</a>
                     </td>
                     <td>
-                        <a class="btn btn-primary" href="<?=base_url('index.php/DepartamentosC/updateDepartamento/').$key->id_Pedido ?>">Tratamiento</a>
+                        <a class="btn btn-primary" href="<?=base_url('index.php/PedidoTratamientosC/show/').$key->id_Pedido ?>">Tratamiento</a>
                     </td>
                     <td>estatus</td>
                 </tr>
