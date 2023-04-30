@@ -4,14 +4,14 @@
     {
         //show listaMateriales
         function getMateriales(){
-            $query = $this->db->get('material');
+            $query = $this->db->get('Material');
             return $query->result();
         }
 
         // ver detalles del Material (getMaterial)
         function getMaterial($id_Material){
             $this->db->where('id_Material', $id_Material);
-            $query = $this->db->get('material');
+            $query = $this->db->get('Material');
             return $query->result();
         }
 
@@ -25,7 +25,7 @@
                 'cantidadDisponible' => $this->input->post('cantidadDisponible')
             );
 
-            $this->db->insert('material', $data);
+            $this->db->insert('Material', $data);
         }
 
         //editar información de Material
@@ -39,13 +39,13 @@
             );
 
             $this->db->where('id_Material', $id_Material);
-            $this->db->update('material', $data);
+            $this->db->update('Material', $data);
         }
 
         //borrar registro de Material
         function deleteMaterial($id_Material){
             $this->db->where('id_Material', $id_Material);
-            $this->db->delete('material');
+            $this->db->delete('Material');
             return TRUE;
         }
     }

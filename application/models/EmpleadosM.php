@@ -4,7 +4,7 @@ class EmpleadosM extends CI_Model
     //Prueva
     function Dependinamico(){
         $this->db->order_by('nombre', 'ASC');
-        $query = $this->db->get('departamento');
+        $query = $this->db->get('Departamento');
         return $query->result();
     }
     //Prueva
@@ -15,7 +15,7 @@ class EmpleadosM extends CI_Model
     }
     //informacion de otra tabla 
     function getPuestos(){
-        $query = $this->db->get('puesto');
+        $query = $this->db->get('Puesto');
         return $query->result();
     }
      
@@ -50,7 +50,7 @@ class EmpleadosM extends CI_Model
 
         );
 
-        $this->db->insert('empleado', $data);
+        $this->db->insert('Empleado', $data);
     }
     //para Actualizar
     function updateEmpleado($id_Empleado){
@@ -77,11 +77,11 @@ class EmpleadosM extends CI_Model
         );
 
         $this->db->where('id_Empleado', $id_Empleado);
-        $this->db->update('empleado', $data);
+        $this->db->update('Empleado', $data);
     }
     function deleteEmpleado($id_Empleado){
         $this->db->where('id_Empleado', $id_Empleado);
-        $this->db->delete('empleado');
+        $this->db->delete('Empleado');
         return TRUE;
     }
 }?>

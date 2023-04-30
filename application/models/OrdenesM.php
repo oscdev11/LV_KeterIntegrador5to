@@ -12,7 +12,7 @@ class OrdenesM extends CI_Model
  
 ////////////////////////////////////////////////////////////
 function getPlantaId(){
-    $query = $this->db->get('planta');
+    $query = $this->db->get('Planta');
     return $query->result();
 }   
 
@@ -23,7 +23,7 @@ function getPlantaId(){
 
 //funcion informacion de tabla cliente
     function getClienteRazon(){
-        $query = $this->db->get('cliente');
+        $query = $this->db->get('Cliente');
         return $query->result();
     }
     
@@ -32,7 +32,7 @@ function getPlantaId(){
 //FUNCION BOTON ELIMINAR 
 function deleteOrden($id_OrdenProduccion){
     $this->db->where('id_OrdenProduccion', $id_OrdenProduccion);
-    $this->db->delete('ordenproduccion');
+    $this->db->delete('OrdenProduccion');
     return TRUE;
 }
 
@@ -47,7 +47,7 @@ function insertOrden(){
         'comentarios' => $this->input->post('comentarios'),
         'estado' => $this->input->post('estado'),
         );
-        $this->db->insert('ordenproduccion', $data);  
+        $this->db->insert('OrdenProduccion', $data);  
 }
 
 
@@ -70,13 +70,13 @@ function updateCliente($id_Cliente){
         );
 
         $this->db->where('id_Cliente', $id_Cliente);
-        $this->db->update('cliente', $data);
+        $this->db->update('Cliente', $data);
 }
 
 //FUNCION BOTON VER 
 function getOrden($id_OrdenProduccion){
     $this->db->where('id_OrdenProduccion', $id_OrdenProduccion);
-    $query = $this->db->get('ordenproduccion');
+    $query = $this->db->get('OrdenProduccion');
     return $query->result();
 }
 

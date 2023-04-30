@@ -6,7 +6,7 @@ class UsuarioM extends CI_Model{
 
     $this->db->where('nombreUsuario',$nombreUsuario);
     $this->db->where('contra',$contra);
-    $q = $this->db->get('jefedepartamento');
+    $q = $this->db->get('JefeDepartamento');
     if ($q->num_rows()>0) {
         return true;
     }else {
@@ -19,7 +19,7 @@ class UsuarioM extends CI_Model{
 
         $this->db->where('nombreUsuario',$nombreUsuario);
         $this->db->where('contra',$contra);
-        $q = $this->db->get('useradmin');
+        $q = $this->db->get('UserAdmin');
         if ($q->num_rows()>0) {
             return true;
         }else {

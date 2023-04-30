@@ -4,14 +4,14 @@
     {
         //show listaColores
         function getColores(){
-            $query = $this->db->get('color');
+            $query = $this->db->get('Color');
             return $query->result();
         }
 
         // ver detalles del Colores (getColor)
         function getColor($id_Color){
             $this->db->where('id_Color', $id_Color);
-            $query = $this->db->get('color');
+            $query = $this->db->get('Color');
             return $query->result();
         }
 
@@ -22,7 +22,7 @@
                 'abreviaturaColor' => $this->input->post('abreviaturaColor'),
             );
 
-            $this->db->insert('color', $data);
+            $this->db->insert('Color', $data);
         }
 
         //editar información de Color
@@ -33,13 +33,13 @@
             );
 
             $this->db->where('id_Color', $id_Color);
-            $this->db->update('color', $data);
+            $this->db->update('Color', $data);
         }
 
         //borrar registro de Color
         function deleteColor($id_Color){
             $this->db->where('id_Color', $id_Color);
-            $this->db->delete('color');
+            $this->db->delete('Color');
             return TRUE;
         }
     }

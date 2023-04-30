@@ -2,9 +2,9 @@
 class JefeDepartamentosM extends CI_Model
 {
     function getJefes(){
-        $sql = "select b.nombre as NombreEmpleado,c.nombre as NombrePuesto, a.nombreUsuario, a.contra from jefedepartamento a 
-        inner join empleado b using(id_Empleado)
-        inner join puesto c using(id_Puesto)";
+        $sql = "select b.nombre as NombreEmpleado,c.nombre as NombrePuesto, a.nombreUsuario, a.contra from JefeDepartamento a 
+        inner join Empleado b using(id_Empleado)
+        inner join Puesto c using(id_Puesto)";
         $query = $this->db->query($sql);
         return $query->result();
     }
@@ -15,7 +15,7 @@ class JefeDepartamentosM extends CI_Model
             'contra' => $this->input->post('contra'),
             );
     
-            $this->db->insert('jefedepartamento', $data);
+            $this->db->insert('JefeDepartamento', $data);
     }
     function getEmpleado(){
         $sql = "select a.id_Empleado, a.nombre  from empleado a

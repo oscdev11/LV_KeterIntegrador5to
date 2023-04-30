@@ -8,9 +8,9 @@
         }*/
 
         function getQuimicoColores($id_Color){
-            $sql = "select c.nombre as Nombre_Quimico, cantidadUsar from quimicocolor
-            inner join color b using(id_Color)
-            inner join quimico c using(id_Quimico) where b.id_Color = $id_Color";
+            $sql = "select c.nombre as Nombre_Quimico, CantidadUsar from QuimicoColor
+            inner join Color b using(id_Color)
+            inner join Quimico c using(id_Quimico) where b.id_Color = $id_Color";
             // $sql = "select * from QuimicoColor, Quimico where QuimicoColor.id_Quimico = Quimico.id_Quimico AND QuimicoColor.id_Color = $id_Color";
 
             $query = $this->db->query($sql);
@@ -19,17 +19,17 @@
 
         function getQuimicoColor($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $query = $this->db->get('quimicocolor');
+            $query = $this->db->get('QuimicoColor');
             return $query->result();
         }
 
         function getColores(){
-            $query = $this->db->get('color');
+            $query = $this->db->get('Color');
             return $query->result();
         }
 
         function getQuimicos(){
-            $query = $this->db->get('quimico');
+            $query = $this->db->get('Quimico');
             return $query->result();
         }
 
@@ -39,13 +39,13 @@
                 'id_Color' => $this->input->post('id_Color'),
                 'cantidadUsar' => $this->input->post('cantidadUsar')
             );
-            $this->db->insert('quimicoColor', $data);
+            $this->db->insert('QuimicoColor', $data);
         }
 
         //borrar registro de Material
         function deleteQuimicoColor($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $this->db->delete('quimicocolor');
+            $this->db->delete('QuimicoColor');
             return TRUE;
         }
     }

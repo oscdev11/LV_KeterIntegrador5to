@@ -19,17 +19,17 @@
 
         function getQuimicoTratamiento($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $query = $this->db->get('quimicotratamiento');
+            $query = $this->db->get('QuimicoTratamiento');
             return $query->result();
         }
 
         function getTratamientos(){
-            $query = $this->db->get('tratamiento');
+            $query = $this->db->get('Tratamiento');
             return $query->result();
         }
 
         function getQuimicos(){
-            $query = $this->db->get('quimico');
+            $query = $this->db->get('Quimico');
             return $query->result();
         }
 
@@ -39,13 +39,13 @@
                 'id_Tratamiento' => $this->input->post('id_Tratamiento'),
                 'cantidadUsar' => $this->input->post('cantidadUsar')
             );
-            $this->db->insert('quimicoTratamiento', $data);
+            $this->db->insert('QuimicoTratamiento', $data);
         }
 
         //borrar registro de Material
         function deleteQuimicoTratamiento($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $this->db->delete('quimicotratamiento');
+            $this->db->delete('QuimicoTratamiento');
             return TRUE;
         }
     }

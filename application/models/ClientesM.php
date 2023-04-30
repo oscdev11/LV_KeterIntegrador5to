@@ -2,19 +2,19 @@
 class ClientesM extends CI_Model
 {
     function getClientes(){
-        $query = $this->db->get('cliente');
+        $query = $this->db->get('Cliente');
         return $query->result();
     }
 
     function getCliente($id_Cliente){
         $this->db->where('id_Cliente', $id_Cliente);
-        $query = $this->db->get('cliente');
+        $query = $this->db->get('Cliente');
         return $query->result();
     }
 
     function deleteCliente($id_Cliente){
         $this->db->where('id_Cliente', $id_Cliente);
-        $this->db->delete('cliente');
+        $this->db->delete('Cliente');
         return TRUE;
     }
 
@@ -35,7 +35,7 @@ class ClientesM extends CI_Model
             'direccionEnvioAlternativa' => $this->input->post('direccionEnvioAlternativa')
             );
     
-            $this->db->insert('cliente', $data);
+            $this->db->insert('Cliente', $data);
     }
 
     function updateCliente($id_Cliente){
@@ -56,7 +56,7 @@ class ClientesM extends CI_Model
             );
     
             $this->db->where('id_Cliente', $id_Cliente);
-            $this->db->update('cliente', $data);
+            $this->db->update('Cliente', $data);
     }
 }
 ?>

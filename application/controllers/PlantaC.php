@@ -8,7 +8,7 @@ class PlantaC extends CI_Controller{
         
         $this->load->view('headersAdmin/head.php');
         $this->load->view('headersAdmin/menu.php');
-        $this->load->view('plantas/listaPlanta.php', $data);
+        $this->load->view('Plantas/listaPlanta.php', $data);
         $this->load->view('headersAdmin/footer.php');
     }
 

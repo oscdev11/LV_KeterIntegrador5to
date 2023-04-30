@@ -10,13 +10,13 @@
 
         //  show lista Puestos
          function getPedidos(){
-             $query = $this->db->get('pedido');
+             $query = $this->db->get('Pedido');
              return $query->result();
          }
 
         // // get departamentosss
           function getTratamientos(){
-              $query = $this->db->get('tratamiento');
+              $query = $this->db->get('Tratamiento');
               return $query->result();
          }
 
@@ -32,13 +32,13 @@
                   'id_Tratamiento' => $this->input->post('id_Tratamiento'),
                   'tiempoEnTratamiento' => $this->input->post('tiempoEnTratamiento')
               );
-              $this->db->insert('tratamientopedido', $data);
+              $this->db->insert('TratamientoPedido', $data);
           }
 
         // // borrar registro de Material
           function deletePedidoTratamiento($id_Tratamiento){
               $this->db->where('id_Tratamiento', $id_Tratamiento);
-              $this->db->delete('tratamientopedido');
+              $this->db->delete('TratamientoPedido');
               return TRUE;
           }
     }
