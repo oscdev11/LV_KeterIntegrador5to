@@ -13,7 +13,7 @@
         <div class="row justify-content-center">
             <div class="col-4">
                 <label for="">Empleado: </label>
-                <select  id="" name="id_Empleado" class="form-control shadow p-1 mb-3 bg-body rounded">
+                <select  class="form-control shadow p-1 mb-3 bg-body rounded" name="idempleado">
                     <?php foreach ($Empleado as $key): ?>
                     <option value="<?=$key->id_Empleado?>"><?=$key->nombre ?></option>
                     <?php endforeach?>
@@ -23,6 +23,11 @@
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="nombreUsuario">
                 <label for="">Contraseña: </label>
                 <input type="text" class="form-control shadow p-1 mb-3 bg-body rounded" name="contra">
+                <label for="">Tipo de usuario:</label>
+                <select name="perfil" id="" class="form-control shadow p-1 mb-3 bg-body rounded">
+                    <option value="1">Administrador</option>
+                    <option value="2">Jefe de Departamento</option>
+                </select>
             </div> 
         </div>
     </div>

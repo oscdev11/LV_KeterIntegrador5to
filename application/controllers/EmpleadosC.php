@@ -2,6 +2,14 @@
 
 class EmpleadosC extends CI_Controller
 {
+    //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+    
     //Prueva
     public function dinamico(){
         parent::dinamico();
@@ -17,20 +25,42 @@ class EmpleadosC extends CI_Controller
         $this->load->model('EmpleadosM');
         $data['empleados'] = $this->EmpleadosM->getEmpleados();
 
+        //visualización de header por perfil de usuario
         $this->load->view('headers/head.php');
+
+        if (($this->session->userdata('perfil')==1)) {
+            $this->load->view('headers/menu.php');
+            $this->load->view('empleados/listaEmpleados.php', $data);
+            $this->load->view('headers/footer.php');
+        } elseif (($this->session->userdata('perfil')==2)) {
+            $this->load->view('JD/headers/404.php');
+        }
+
+        /*$this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
         $this->load->view('empleados/listaEmpleados.php', $data);
-        $this->load->view('headers/footer.php');
+        $this->load->view('headers/footer.php');*/
     }
     //funcion del boton ver
     public function detalleEmpleado($id_Empleado ){
         $this->load->model('EmpleadosM');
         $data['empleado'] = $this->EmpleadosM->getEmpleado($id_Empleado);
 
+        //visualización de header por perfil de usuario
         $this->load->view('headers/head.php');
+
+        if (($this->session->userdata('perfil')==1)) {
+            $this->load->view('headers/menu.php');
+            $this->load->view('empleados/detalleEmpleado.php', $data);
+            $this->load->view('headers/footer.php');
+        } elseif (($this->session->userdata('perfil')==2)) {
+            $this->load->view('JD/headers/404.php');
+        }
+
+        /*$this->load->view('headers/head.php');
         $this->load->view('headers/menu.php');
         $this->load->view('empleados/detalleEmpleado.php', $data);
-        $this->load->view('headers/footer.php');
+        $this->load->view('headers/footer.php');*/
     }
     //funcion del boton de agregar
     public function insertEmpleado(){
@@ -43,10 +73,22 @@ class EmpleadosC extends CI_Controller
             $this->form_validation->set_rules('nombre', 'id_Puesto', 'required');
 
             if($this->form_validation->run() == FALSE){
-                $this->load->view('headers/head.php');
+
+                //visualización de header por perfil de usuario
+        $this->load->view('headers/head.php');
+
+                if (($this->session->userdata('perfil')==1)) {
+                    $this->load->view('headers/menu.php');
+                    $this->load->view('empleados/insertEmpleado',$data); 
+                    $this->load->view('headers/footer.php');
+                } elseif (($this->session->userdata('perfil')==2)) {
+                    $this->load->view('JD/headers/404.php');
+                }
+
+                /*$this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
                 $this->load->view('empleados/insertEmpleado',$data);                
-                $this->load->view('headers/footer.php');
+                $this->load->view('headers/footer.php');*/
 
             } else{
                 $this->EmpleadosM->insertEmpleado();
@@ -73,10 +115,22 @@ class EmpleadosC extends CI_Controller
             $this->form_validation->set_rules('numTrabajador', 'required');
 
             if($this->form_validation->run() == FALSE){
+
+                //visualización de header por perfil de usuario
                 $this->load->view('headers/head.php');
+
+                if (($this->session->userdata('perfil')==1)) {
+                    $this->load->view('headers/menu.php');
+                    $this->load->view('empleados/updateEmpleado', $data);
+                    $this->load->view('headers/footer.php');
+                } elseif (($this->session->userdata('perfil')==2)) {
+                    $this->load->view('JD/headers/404.php');
+                }
+
+                /*$this->load->view('headers/head.php');
                 $this->load->view('headers/menu.php');
                 $this->load->view('empleados/updateEmpleado', $data);
-                $this->load->view('headers/footer.php');
+                $this->load->view('headers/footer.php');*/
                 
             } else{
                 $this->EmpleadosM->updateEmpleado($id_Empleado);

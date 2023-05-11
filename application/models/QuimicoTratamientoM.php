@@ -3,9 +3,9 @@
     class QuimicoTratamientoM extends CI_Model
     {
         function getQuimicoTratamientos($id_Tratamiento){
-            $sql = "select c.nombre as Nombre_Quimico, a.cantidadUsar from quimicotratamiento a
-            inner join tratamiento b using(id_Tratamiento)
-            inner join quimico c using(id_Quimico) 
+            $sql = "select c.nombre as Nombre_Quimico, a.cantidadUsar from QuimicoTratamiento a
+            inner join Tratamiento b using(id_Tratamiento)
+            inner join Quimico c using(id_Quimico) 
             where b.id_Tratamiento = $id_Tratamiento";
             $query = $this->db->query($sql);
             return $query->result();

@@ -55,12 +55,12 @@
 
       <ul class="navbar-nav">
       <li class="nav-item dropdown d-flex">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola Admin <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="28" height="28">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Hola, bienvenido <img src="https://cdn-icons-png.flaticon.com/512/863/863817.png" width="28" height="28">
           </a>
           <ul class="dropdown-menu">
             <li></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?=base_url('index.php/Usuario/login') ?>">Cerrar sesión</a></li>
+            <li><a class="dropdown-item" href="<?=base_url('') ?>">Cerrar sesión</a></li>
           </ul>
         </li>
 </ul>

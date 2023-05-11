@@ -2,26 +2,47 @@
 class JefeDepartamentosM extends CI_Model
 {
     function getJefes(){
-        $sql = "select b.nombre as NombreEmpleado,c.nombre as NombrePuesto, a.nombreUsuario, a.contra from JefeDepartamento a 
+        $sql = "select b.nombre as NombreEmpleado,c.nombre as NombrePuesto, a.id_JefeDepartamento, a.nombreUsuario, a.contra, a.perfil from JefeDepartamento a 
         inner join Empleado b using(id_Empleado)
         inner join Puesto c using(id_Puesto)";
         $query = $this->db->query($sql);
         return $query->result();
     }
-    function inserJefeDepartamento(){
-        $data = array(
-            'id_Empleado' => $this->input->post('id_Empleado'),
-            'nombreUsuario' => $this->input->post('nombreUsuario'),
-            'contra' => $this->input->post('contra'),
-            );
-    
-            $this->db->insert('JefeDepartamento', $data);
-    }
+
     function getEmpleado(){
-        $sql = "select a.id_Empleado, a.nombre  from empleado a
-        inner join puesto b using(id_Puesto) where b.nombre = 'Jefe De Departamento'";
+        $sql = "select a.id_Empleado, a.nombre  from Empleado a
+        inner join Puesto b using(id_Puesto) where b.nombre = 'Jefe De Departamento'";
         $query = $this->db->query($sql);
         return $query->result();
+    }
+
+
+    function inserJefeDepartamento(){
+        $data = array(
+            'id_Empleado' => $this->input->post('idempleado'),
+            'nombreUsuario' => $this->input->post('nombreUsuario'),
+            'contra' => md5($this->input->post('contra')),
+            'perfil' => $this->input->post('perfil')
+            );
+            
+            $this->db->insert('JefeDepartamento', $data);
+    }
+
+    function deleteJefeDepartamento($id_JefeDepartamento){
+        $this->db->where('id_JefeDepartamento', $id_JefeDepartamento);
+        $this->db->delete('JefeDepartamento');
+        return TRUE;
+    }
+    
+    //editar información de Color
+    function updateJefeDepartamento($id_JefeDepartamento){
+        $data = array(
+            'nombreUsuario' => $this->input->post('nombreUsuario'),
+            'contra' => $this->input->post('contra'),
+        );
+
+        $this->db->where('id_JefeDepartamento', $id_JefeDepartamento);
+        $this->db->update('JefeDepartamento', $data);
     }
 
 

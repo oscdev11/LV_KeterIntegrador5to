@@ -2,12 +2,29 @@
 
 class OrdenesC extends CI_Controller
 {
+
+    //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+    
     public function show(){
         $this->load->model('OrdenesM');
         $data['ordenes'] = $this->OrdenesM->getOrdenes();
-
+        
+        //visualización de header por perfil de usuario
         $this->load->view('headers/head.php');
-        $this->load->view('headers/menu.php');
+
+        if (($this->session->userdata('perfil')==1)) {
+            $this->load->view('headers/menu.php');
+        } elseif (($this->session->userdata('perfil')==2)) {
+            $this->load->view('JD/headers/menu.php');
+        }
+
+        //$this->load->view('headers/menu.php');
         $this->load->view('ordenes/listaOrdenes.php', $data);
         $this->load->view('headers/footer.php');
     }
@@ -32,8 +49,16 @@ class OrdenesC extends CI_Controller
         $this->form_validation->set_rules('id_Planta', 'Planta', 'required');
         
         if ($this->form_validation->run() == FALSE){
+
+            //visualización de header por perfil de usuario
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
             $this->load->view('ordenes/insertOrden.php',$data);
             $this->load->view('headers/footer.php');
     }
@@ -58,10 +83,18 @@ class OrdenesC extends CI_Controller
 
                 if ($this->form_validation->run() == FALSE)
                 {
+                        //visualización de header por perfil de usuario
                         $this->load->view('headers/head.php');
-                        $this->load->view('headers/menu.php');
-                        $this->load->view('headers/footer.php');
+
+                        if (($this->session->userdata('perfil')==1)) {
+                            $this->load->view('headers/menu.php');
+                        } elseif (($this->session->userdata('perfil')==2)) {
+                            $this->load->view('JD/headers/menu.php');
+                        }
+
                         $this->load->view('ordenes/updateOrdenes', $data);
+                        $this->load->view('headers/footer.php');
+                        
                 }
                 else
                 {
@@ -74,8 +107,15 @@ class OrdenesC extends CI_Controller
         $this->load->model('OrdenesM');
         $data['odendesVer'] = $this->OrdenesM->getOrden($id_OrdenProduccion);
 
+        //visualización de header por perfil de usuario
         $this->load->view('headers/head.php');
-        $this->load->view('headers/menu.php');
+
+        if (($this->session->userdata('perfil')==1)) {
+            $this->load->view('headers/menu.php');
+        } elseif (($this->session->userdata('perfil')==2)) {
+            $this->load->view('JD/headers/menu.php');
+        }
+
         $this->load->view('ordenes/detalleOrden.php', $data);
         $this->load->view('headers/footer.php');
     }

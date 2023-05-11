@@ -2,13 +2,29 @@
 
     class TratamientosC extends CI_Controller
     {
+
+        //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+    
         //show listaTratamientos
         public function show(){
             $this->load->model('TratamientosM');
             $data['tratamientos'] = $this->TratamientosM->getTratamientos();
 
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
+            //$this->load->view('headers/menu.php');
             $this->load->view('tratamientos/listaTratamientos.php', $data);            
             $this->load->view('headers/footer.php');
 
@@ -22,8 +38,16 @@
                 $this->form_validation->set_rules('nombreTratamiento', 'nombreTratamiento', 'required');
 
                 if($this->form_validation->run() == FALSE){
+                    
+                    //visualización de header por perfil de usuario
                     $this->load->view('headers/head.php');
-                    $this->load->view('headers/menu.php');
+
+                    if (($this->session->userdata('perfil')==1)) {
+                        $this->load->view('headers/menu.php');
+                    } elseif (($this->session->userdata('perfil')==2)) {
+                        $this->load->view('JD/headers/menu.php');
+                    }
+
                     $this->load->view('tratamientos/insertTratamiento');                    
                     $this->load->view('headers/footer.php');
 
@@ -42,8 +66,16 @@
                 $this->form_validation->set_rules('nombreTratamiento', 'nombreTratamiento', 'required');
 
                 if($this->form_validation->run() == FALSE){
+                    
+                    //visualización de header por perfil de usuario
                     $this->load->view('headers/head.php');
-                    $this->load->view('headers/menu.php');
+
+                    if (($this->session->userdata('perfil')==1)) {
+                        $this->load->view('headers/menu.php');
+                    } elseif (($this->session->userdata('perfil')==2)) {
+                        $this->load->view('JD/headers/menu.php');
+                    }
+
                     $this->load->view('tratamientos/updateTratamiento', $data);                    
                     $this->load->view('headers/footer.php');
 
@@ -58,8 +90,15 @@
             $this->load->model('TratamientosM');
             $data['tratamiento'] = $this->TratamientosM->getTratamiento($id_Tratamiento);
 
+            //visualización de header por perfil de usuario
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
             $this->load->view('tratamientos/detalleTratamiento.php', $data);            
             $this->load->view('headers/footer.php');
 
