@@ -15,9 +15,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="<?=base_url('index.php/OrdenesC/show') ?> "><i class="fa-solid fa-house"></i> Home (órdenes)</a>
+        <a class="nav-link active" aria-current="page" href="<?=base_url('index.php/DashCJD/show') ?> "><i class="fa-solid fa-house"></i> Home</a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?=base_url('index.php/OrdenesC/show') ?>">Órdenes</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=base_url('index.php/MaterialesC/show') ?>">Material</a>
       </li>

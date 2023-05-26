@@ -22,6 +22,22 @@
         min-height: 77.6vh;
         padding: 1em;
     }
+
+    .contenedor {
+      width: 80%; /* Anchura del div */
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+    .img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  filter: brightness(45%);
+}
+
+
+
   </style>
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" type="text/css">

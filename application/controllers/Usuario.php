@@ -48,7 +48,7 @@ public function login(){
                         );
                     
                         $this->session->set_userdata($newdata);
-                        redirect(base_url('index.php/OrdenesC/show'),'refresh');
+                        redirect(base_url('index.php/DashCJD/show'),'refresh');
                     }
                 }
                     //redirect(base_url('index.php/PlantaC/show'), 'refresh');
