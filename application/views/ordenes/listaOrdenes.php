@@ -12,7 +12,7 @@
 
     <table class="table table-striped table-hover align-bottom">
         <thead class="table-dark">
-            <th align="center" class="">Acciones</th>
+            <th align="center" class="w-25">Acciones</th>
             <th class="w-auto p-3">Pedido</th>
 
             <th class="w-auto p-3">Cliente </th>
@@ -31,7 +31,7 @@
                     <td>
                         <a class="btn btn-primary" href="<?=base_url('index.php/OrdenesC/updatePlanta/').$key->id_OrdenProduccion ?>">Editar</a> 
                         <a class="btn btn-danger" href="<?=base_url('index.php/OrdenesC/borrarOrden/').$key->id_OrdenProduccion ?>">Eliminar</a>
-                      <a class="btn btn-warning" href="<?=base_url('index.php/OrdenesC/detalleOrden/').$key->razonSocial ?>">Ver</a> 
+                      <a class="btn btn-warning" href="<?=base_url('index.php/OrdenesC/detalleOrden/').$key->id_OrdenProduccion ?>">Ver</a> 
                     </td>
                     
                     <td>

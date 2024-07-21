@@ -3,14 +3,14 @@
     {
         //show listaQuimicos
         function getQuimicos(){
-            $query = $this->db->get('quimico');
+            $query = $this->db->get('Quimico');
             return $query->result();
         }
 
         // obtener detalles del Quimico (getQuimico)
         function getQuimico($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $query = $this->db->get('quimico');
+            $query = $this->db->get('Quimico');
             return $query->result();
         }
 
@@ -23,7 +23,7 @@
                 'cantidadDisponible' => $this->input->post('cantidadDisponible')
             );
 
-            $this->db->insert('quimico', $data);
+            $this->db->insert('Quimico', $data);
         }
 
         //editar información de Químico
@@ -36,13 +36,13 @@
             );
 
             $this->db->where('id_Quimico', $id_Quimico);
-            $this->db->update('quimico', $data);
+            $this->db->update('Quimico', $data);
         }
 
         //borrar registro de Material
         function deleteQuimico($id_Quimico){
             $this->db->where('id_Quimico', $id_Quimico);
-            $this->db->delete('quimico');
+            $this->db->delete('Quimico');
             return TRUE;
         }
     }

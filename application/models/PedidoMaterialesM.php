@@ -10,13 +10,13 @@
 
         //  show lista Puestos
          function getPedidos(){
-             $query = $this->db->get('pedido');
+             $query = $this->db->get('Pedido');
              return $query->result();
          }
 
         // // get departamentosss
           function getMateriales(){
-              $query = $this->db->get('material');
+              $query = $this->db->get('Material');
               return $query->result();
          }
 
@@ -32,13 +32,13 @@
                   'id_Material' => $this->input->post('id_Material'),
                   'porcentaje' => $this->input->post('porcentaje')
               );
-              $this->db->insert('materialpedido', $data);
+              $this->db->insert('MaterialPedido', $data);
           }
 
         // // borrar registro de Material
           function deletePedidoMaterial($id_Pedido){
               $this->db->where('id_Pedido', $id_Pedido);
-              $this->db->delete('materialpedido');
+              $this->db->delete('MaterialPedido');
               return TRUE;
           }
     }

@@ -2,11 +2,28 @@
 
     class QuimicoTratamientoC extends CI_Controller
     {
+
+        //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+    
         public function show($id_Tratamiento){
             $this->load->model('QuimicoTratamientoM');
             $data['quimicos'] = $this->QuimicoTratamientoM->getQuimicoTratamientos($id_Tratamiento);
+            
+            //visualización de header por perfil de usuario
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
             $this->load->view('quimicoTratamiento/listaQuimicoTratamiento.php', $data);
             $this->load->view('headers/footer.php');
         }
@@ -21,8 +38,16 @@
                 $this->form_validation->set_rules('cantidadUsar', 'cantidadUsar', 'required');
 
                 if($this->form_validation->run() == FALSE){
+                    
+                    //visualización de header por perfil de usuario
                     $this->load->view('headers/head.php');
-                    $this->load->view('headers/menu.php');
+
+                    if (($this->session->userdata('perfil')==1)) {
+                        $this->load->view('headers/menu.php');
+                    } elseif (($this->session->userdata('perfil')==2)) {
+                        $this->load->view('JD/headers/menu.php');
+                    }
+
                     $this->load->view('quimicoTratamiento/insertQuimicoTratamiento', $data);
                     $this->load->view('headers/footer.php');
                 } else{

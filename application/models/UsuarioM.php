@@ -15,7 +15,8 @@ class UsuarioM extends CI_Model
             return false;
         }
 
-    }
+    }*/
+    /*
 
     public function validaUsuarioE($nombreUsuario, $contra)
     {

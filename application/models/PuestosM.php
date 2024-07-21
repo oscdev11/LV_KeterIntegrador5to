@@ -10,19 +10,19 @@
 
         //show lista Puestos
         function getPuestoss(){
-            $query = $this->db->get('puesto');
+            $query = $this->db->get('Puesto');
             return $query->result();
         }
 
         //get departamentosss
         function getDepartamentos(){
-            $query = $this->db->get('departamento');
+            $query = $this->db->get('Departamento');
             return $query->result();
         }
 
         function getPuesto($id_Puesto){
             $this->db->where('id_Puesto', $id_Puesto);
-            $query = $this->db->get('puesto');
+            $query = $this->db->get('Puesto');
             return $query->result();
         }
 
@@ -31,13 +31,13 @@
                 'id_Departamento' => $this->input->post('id_Departamento'),
                 'nombre' => $this->input->post('nombre')
             );
-            $this->db->insert('puesto', $data);
+            $this->db->insert('Puesto', $data);
         }
 
         //borrar registro de Material
         function deletePuesto($id_Puesto){
             $this->db->where('id_Puesto', $id_Puesto);
-            $this->db->delete('puesto');
+            $this->db->delete('Puesto');
             return TRUE;
         }
     }

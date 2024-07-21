@@ -4,14 +4,14 @@
     {
         //show listaTratamientos
         function getTratamientos(){
-            $query = $this->db->get('tratamiento');
+            $query = $this->db->get('Tratamiento');
             return $query->result();
         }
 
         // ver detalles del Tratamiento (getTratamiento)
         function getTratamiento($id_Tratamiento){
             $this->db->where('id_Tratamiento', $id_Tratamiento);
-            $query = $this->db->get('tratamiento');
+            $query = $this->db->get('Tratamiento');
             return $query->result();
         }
 
@@ -21,7 +21,7 @@
                 'nombreTratamiento' => $this->input->post('nombreTratamiento'),
             );
 
-            $this->db->insert('tratamiento', $data);
+            $this->db->insert('Tratamiento', $data);
         }
 
         //editar información de Tratamiento
@@ -31,13 +31,13 @@
             );
 
             $this->db->where('id_Tratamiento', $id_Tratamiento);
-            $this->db->update('tratamiento', $data);
+            $this->db->update('Tratamiento', $data);
         }
 
         //borrar registro de Tratmiento
         function deleteTratamiento($id_Tratamiento){
             $this->db->where('id_Tratamiento', $id_Tratamiento);
-            $this->db->delete('tratamiento');
+            $this->db->delete('Tratamiento');
             return TRUE;
         }
     }

@@ -12,7 +12,24 @@ class JefeDepartamentosM extends CI_Model
     function inserJefeDepartamento()
     {
         $data = array(
-            'id_Empleado' => $this->input->post('id_Empleado'),
+            'id_Empleado' => $this->input->post('idempleado'),
+            'nombreUsuario' => $this->input->post('nombreUsuario'),
+            'contra' => md5($this->input->post('contra')),
+            'perfil' => $this->input->post('perfil')
+            );
+            
+            $this->db->insert('JefeDepartamento', $data);
+    }
+
+    function deleteJefeDepartamento($id_JefeDepartamento){
+        $this->db->where('id_JefeDepartamento', $id_JefeDepartamento);
+        $this->db->delete('JefeDepartamento');
+        return TRUE;
+    }
+    
+    //editar información de Color
+    function updateJefeDepartamento($id_JefeDepartamento){
+        $data = array(
             'nombreUsuario' => $this->input->post('nombreUsuario'),
             'contra' => $this->input->post('contra'),
         );

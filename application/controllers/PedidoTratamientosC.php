@@ -2,6 +2,15 @@
 
     class PedidoTratamientosC extends CI_Controller
     {
+
+        //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+    
         public function show($id_Pedido){
             $this->load->model('PedidoTratamientosM');
             $data['tratamientos'] = $this->PedidoTratamientosM->getPedidoTratamientos($id_Pedido);

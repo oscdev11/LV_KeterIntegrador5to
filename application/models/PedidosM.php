@@ -10,7 +10,7 @@
 
         // show lista Puestos
         function getOrdenes(){
-            $query = $this->db->get('ordenproduccion');
+            $query = $this->db->get('OrdenProduccion');
             return $query->result();
         }
 
@@ -18,7 +18,7 @@
 
         // get departamentosss
          function getColores(){
-             $query = $this->db->get('color');
+             $query = $this->db->get('Color');
              return $query->result();
         }
 
@@ -36,13 +36,13 @@
                  'PrecioUnitario' => $this->input->post('PrecioUnitario'),
                  'descripcion' => $this->input->post('descripcion')
              );
-             $this->db->insert('pedido', $data);
+             $this->db->insert('Pedido', $data);
          }
 
         // borrar registro de Material
          function deletePedido($id_Pedido){
              $this->db->where('id_Pedido', $id_Pedido);
-             $this->db->delete('pedido');
+             $this->db->delete('Pedido');
              return TRUE;
          }
     }

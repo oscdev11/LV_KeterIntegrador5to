@@ -2,12 +2,28 @@
 
     class ColoresC extends CI_Controller
     {
+
+        //CONSTRUCTOR PARA EL LOGUEO DE USUARIOS (SESIONES)
+    function __construct(){
+        parent::__construct();
+        if(!$this->session->userdata('logged_in')){
+            redirect(base_url());
+        }
+    }
+
         public function show(){
             $this->load->model('ColoresM');
             $data['colores'] = $this->ColoresM->getColores();
 
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
+            //$this->load->view('headers/menu.php');
             $this->load->view('colores/listaColores.php', $data);            
             $this->load->view('headers/footer.php');
 
@@ -18,8 +34,15 @@
             $this->load->model('ColoresM');
             $data['color'] = $this->ColoresM->getColor($id_Color);
 
+            //visualización de header por perfil de usuario
             $this->load->view('headers/head.php');
-            $this->load->view('headers/menu.php');
+
+            if (($this->session->userdata('perfil')==1)) {
+                $this->load->view('headers/menu.php');
+            } elseif (($this->session->userdata('perfil')==2)) {
+                $this->load->view('JD/headers/menu.php');
+            }
+
             $this->load->view('colores/detalleColor.php', $data);
             $this->load->view('headers/footer.php');
 
@@ -33,8 +56,16 @@
                 $this->form_validation->set_rules('nombreColor', 'nombreColor', 'required');
 
                 if($this->form_validation->run() == FALSE){
+                    
+                    //visualización de header por perfil de usuario
                     $this->load->view('headers/head.php');
-                    $this->load->view('headers/menu.php');
+
+                    if (($this->session->userdata('perfil')==1)) {
+                        $this->load->view('headers/menu.php');
+                    } elseif (($this->session->userdata('perfil')==2)) {
+                        $this->load->view('JD/headers/menu.php');
+                    }
+
                     $this->load->view('colores/insertColor');                    
                     $this->load->view('headers/footer.php');
 
@@ -53,8 +84,16 @@
                 $this->form_validation->set_rules('nombreColor', 'nombreColor', 'required');
 
                 if($this->form_validation->run() == FALSE){
+                    
+                    //visualización de header por perfil de usuario
                     $this->load->view('headers/head.php');
-                    $this->load->view('headers/menu.php');
+
+                    if (($this->session->userdata('perfil')==1)) {
+                        $this->load->view('headers/menu.php');
+                    } elseif (($this->session->userdata('perfil')==2)) {
+                        $this->load->view('JD/headers/menu.php');
+                    }
+
                     $this->load->view('colores/updateColor', $data);                    
                     $this->load->view('headers/footer.php');
 

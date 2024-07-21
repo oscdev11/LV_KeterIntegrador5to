@@ -2,20 +2,20 @@
     class PlantaM extends CI_Model{
 //funcion pantalla principal
         function getPlantas(){
-            $query = $this->db->get('planta');
+            $query = $this->db->get('Planta');
             return $query->result();
         }
 
 //fucion ver de la tabla user admin
         function getAdmin(){
-            $query = $this->db->get('userAdmin');
+            $query = $this->db->get('UserAdmin');
             return $query->result();
         }
 
 //funcion boton ver
         function getPlanta($id_Planta){
             $this->db->where('id_Planta', $id_Planta);
-            $query = $this->db->get('planta');
+            $query = $this->db->get('Planta');
             return $query->result();
         }
 //funcion boton insertar
@@ -27,7 +27,7 @@
                 'telefono' => $this->input->post('telefono'),
                 'domicilio' => $this->input->post('domicilio'),
                 );
-                $this->db->insert('planta', $data);
+                $this->db->insert('Planta', $data);
         }
 //funcion actualizar planta
         function updatePlanta($id_Planta){
@@ -38,13 +38,13 @@
                 'domicilio' => $this->input->post('domicilio'),
                 );
                 $this->db->where('id_Planta', $id_Planta);
-                $this->db->update('planta', $data);
+                $this->db->update('Planta', $data);
         }
 
  //funcion eliminar        
         function deletePlanta($id_Planta){
             $this->db->where('id_Planta', $id_Planta);
-            $this->db->delete('planta');
+            $this->db->delete('Planta');
             return TRUE;
         }
     }
